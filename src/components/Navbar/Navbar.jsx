@@ -224,7 +224,7 @@ const Navbar = () => {
     //    {/* <!-- End Mobile menu --> */}
     //      </section>
 
-    <div>NavBar</div>
+    <div className='text-pink-500 font-black'>NavBar</div>
 
     );
     };
