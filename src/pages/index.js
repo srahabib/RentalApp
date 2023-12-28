@@ -4,9 +4,9 @@ import { Inter } from '@next/font/google'
 import Hero from '../components/Hero/Hero'
 import HouseCard from '../components/HouseCard/HouseCard'
 import MAIN from '../components/Main/Main'
-import BookingSearch from './BookingSearch'
 
-export default function Home() {
+import BookingSearch from './BookingSearch'
+ export default function Home() {
   return (
     <>
     <Head>
@@ -16,10 +16,8 @@ export default function Home() {
       <link rel="icon" href="/favicon.ico" />
     </Head>
        <Hero/>
-        <HouseCard/>
+        {/* <HouseCard/> */}
         <MAIN/>
-    
-
   </>
   )
 }
