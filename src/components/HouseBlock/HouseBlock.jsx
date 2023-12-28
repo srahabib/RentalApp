@@ -42,8 +42,8 @@ const HouseBlock = () => {
     <div className="bg-white">
       <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
         <div className="flex flex-row flex-wrap">
-          {/* Left */}
-          <div className="flex-shrink max-w-full w-full lg:w-2/3 overflow-hidden">
+          {/* Left lg:w-2/3 if we want the Advertisement back */}
+          <div className="flex-shrink max-w-full w-full lg:w-full overflow-hidden">
             {/* Title */}
             <div className="w-full py-3">
               <h2 className="text-gray-800 text-2xl font-bold">
@@ -52,7 +52,7 @@ const HouseBlock = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 ">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
               {/* Map over the houseData array to create HouseCard instances */}
               {houseData.map((house, index) => (
                 <HouseCard key={index} title={house.title} location={house.location} description={house.description} />
@@ -60,7 +60,7 @@ const HouseBlock = () => {
             </div>
           </div>
           {/* Right */}
-          <Advertisement />
+          {/* <Advertisement /> */}
         </div>
       </div>
     </div>
