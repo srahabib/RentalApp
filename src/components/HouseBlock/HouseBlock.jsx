@@ -45,12 +45,12 @@ const HouseBlock = () => {
           {/* Left lg:w-2/3 if we want the Advertisement back */}
           <div className="flex-shrink max-w-full w-full lg:w-full overflow-hidden">
             {/* Title */}
-            <div className="w-full py-3">
+            {/* <div className="w-full py-3">
               <h2 className="text-gray-800 text-2xl font-bold">
                 <span className="inline-block h-5 border-l-3 border-red-600 mr-2"></span>
                 Europe
               </h2>
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
               {/* Map over the houseData array to create HouseCard instances */}
