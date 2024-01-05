@@ -4,7 +4,11 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { BedDoubleIcon, CalendarIcon } from "lucide-react";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { format } from "date-fns";
 
 import {
@@ -42,13 +46,12 @@ export const formSchema = z.object({
 function Search() {
   const router = useRouter();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm({
     defaultValues: {
       location: "",
       dates: {
-        from: undefined,
-        to: undefined,
+        from: null,
+        to: null,
       },
       adults: "1",
       children: "0",
