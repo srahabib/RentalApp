@@ -3,6 +3,8 @@ import Navbar from './Navbar/Navbar'
 import Footer from './Footer/Footer'
 import MAIN from './Main/Main'
 import Hero from './Hero/Hero'
+import Nav from './Nav/Nav'
+
 
 
 
@@ -10,7 +12,7 @@ import Hero from './Hero/Hero'
 const Layout = ({children}) => {
   return (
     <>
-        <Navbar />
+        <Nav/>
        
         {children}
         {/* <Hero/>
