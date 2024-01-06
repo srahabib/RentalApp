@@ -103,7 +103,7 @@ function Search() {
                 <FormMessage />
 
                 <FormControl>
-                  <Input className="bg-white" placeholder="London, UK" {...field} />
+                  <Input className="bg-white" placeholder="Enter Location" {...field} />
                 </FormControl>
               </FormItem>
             )}
