@@ -45,9 +45,10 @@ const Main = () => {
                     </div>
                   </div>
                 </div>
-                <HouseBlock/>
+              
               </div>
             </div>
+            
             {/* <!-- right --> */}
             {/* <div class="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-first lg:order-last">
               <div class="w-full bg-white">
@@ -87,7 +88,7 @@ const Main = () => {
           </div>
         </div>
       {/* </div> */}
-  
+      <HouseBlock/>
   
     </main>
 

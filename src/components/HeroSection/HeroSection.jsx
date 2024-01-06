@@ -41,7 +41,7 @@ const trending_data = [
 
 const HeroSection = () => {
     return(
-    <main className="bg-[#EADDCA]">
+    <main className="bg-[#EADDCA] pb-10 mb-10">
       <section className="max-w-7xl mx-auto p-6">
         <h2 className="font-bold text-5xl text-white">Find your Next Stay</h2>
         <h3 className="text-white py-5 text-xl">

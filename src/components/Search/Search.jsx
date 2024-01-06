@@ -103,7 +103,7 @@ function Search() {
                 <FormMessage />
 
                 <FormControl>
-                  <Input placeholder="London, UK" {...field} />
+                  <Input className="bg-white" placeholder="London, UK" {...field} />
                 </FormControl>
               </FormItem>
             )}
@@ -119,7 +119,7 @@ function Search() {
                 <FormLabel className="text-white">Dates</FormLabel>
                 <FormMessage />
 
-                <Popover>
+                <Popover >
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
@@ -127,8 +127,8 @@ function Search() {
                         name="dates"
                         variant={"outline"}
                         className={cn(
-                          "w-full lg:w-[300px] justify-start text-left font-normal",
-                          !field.value.from && "text-muted-foreground"
+                          "w-full lg:w-[300px] bg-white hover:bg-white justify-start text-left font-normal",
+                          !field.value.from && "text-muted-foreground hover:opacity-100"
                         )}
                       >
                         <CalendarIcon className="mr-3 h-4 w-4 opacity-50" />
@@ -149,6 +149,7 @@ function Search() {
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
+                      className="bg-white"
                       initialFocus
                       mode="range"
                       selected={field.value}
@@ -176,7 +177,7 @@ function Search() {
                   <FormLabel className="text-white">Adults</FormLabel>
                   <FormMessage />
                   <FormControl>
-                    <Input type="number" placeholder="Adults" {...field} />
+                    <Input className="bg-white" type="number" placeholder="Adults" {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -192,7 +193,7 @@ function Search() {
                   <FormLabel className="text-white">Children</FormLabel>
                   <FormMessage />
                   <FormControl>
-                    <Input type="number" placeholder="Children" {...field} />
+                    <Input className="bg-white" type="number" placeholder="Children" {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -208,7 +209,7 @@ function Search() {
                   <FormLabel className="text-white">Rooms</FormLabel>
                   <FormMessage />
                   <FormControl>
-                    <Input type="number" placeholder="rooms" {...field} />
+                    <Input className="bg-white" type="number" placeholder="rooms" {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -216,7 +217,7 @@ function Search() {
           </div>
 
           <div className="mt-auto">
-            <Button type="submit" className="bg-blue-500 text-base">
+            <Button type="submit" className="bg-amber-600 text-base text-white hover:opacity-90 ">
               Search
             </Button>
           </div>
