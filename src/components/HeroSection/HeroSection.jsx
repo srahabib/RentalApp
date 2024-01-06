@@ -61,7 +61,7 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="flex space-x-4 py-5 overflow-x-scroll">
+        <div className="flex space-x-4 py-5 overflow-x-scroll scrollbar-hide">
           {trending_data.map((item) => (
             <div key={item.id} className="space-y-1 shrink-0 cursor-pointer">
               <img

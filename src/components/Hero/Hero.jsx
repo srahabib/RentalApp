@@ -80,13 +80,6 @@ const Hero = () => {
     </div>
 </section>
 
-
-
-
-
-
-
-
     )
 }
 
