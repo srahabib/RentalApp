@@ -10,7 +10,7 @@ const Navbar = () => {
 
 <section>
 <nav
-    class="relative flex w-full flex-nowrap items-center justify-between bg-white py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-4"
+    class=" p-20 relative flex w-full flex-nowrap items-center justify-between bg-white py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-4"
     data-te-navbar-ref>
     <div class="flex w-full flex-wrap items-center justify-between px-3">
         <button
@@ -53,8 +53,23 @@ const Navbar = () => {
             class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
             data-te-nav-item-ref>
             <a
-                class="  active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                class="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 aria-current="page"
+                href="#"
+                data-te-nav-link-ref
+                >
+                    
+
+                </a>
+            
+            </li>
+
+            <img className="w-5 h-5" src="/images/rentorLogo4.svg" alt="" />
+            <li
+            class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+            data-te-nav-item-ref>
+            <a
+                class="pl-5 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 href="#"
                 data-te-nav-link-ref
                 >Home</a
@@ -62,20 +77,10 @@ const Navbar = () => {
             </li>
             <li
             class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
-            data-te-nav-item-ref>
-            <a
-                class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                href="#"
-                data-te-nav-link-ref
-                >Services</a
-            >
-            </li>
-            <li
-            class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
             data-te-nav-link-ref>
             <a
                 class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                >About Us</a
+                >Apartments</a
             >
             </li>
             <li
@@ -84,6 +89,14 @@ const Navbar = () => {
             <a
                 class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >Contact</a
+            >
+            </li>
+            <li
+            class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+            data-te-nav-link-ref>
+            <a
+                class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                >About</a
             >
             </li>
         </ul>
