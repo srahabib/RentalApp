@@ -95,9 +95,9 @@ function Search() {
             name="location"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white flex">
+                <FormLabel className="text-black flex">
                   Location
-                  <BedDoubleIcon className="ml-2 h-4 w-4 text-white" />
+                  <BedDoubleIcon className="ml-2 h-4 w-4 text-black" />
                 </FormLabel>
 
                 <FormMessage />
@@ -116,7 +116,7 @@ function Search() {
             name="dates"
             render={({ field }) => (
               <FormItem className="flex flex-col">
-                <FormLabel className="text-white">Dates</FormLabel>
+                <FormLabel className="text-black">Dates</FormLabel>
                 <FormMessage />
 
                 <Popover >
@@ -174,7 +174,7 @@ function Search() {
               name="adults"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
-                  <FormLabel className="text-white">Adults</FormLabel>
+                  <FormLabel className="text-black">Adults</FormLabel>
                   <FormMessage />
                   <FormControl>
                     <Input className="bg-white" type="number" placeholder="Adults" {...field} />
@@ -190,7 +190,7 @@ function Search() {
               name="children"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
-                  <FormLabel className="text-white">Children</FormLabel>
+                  <FormLabel className="text-black">Children</FormLabel>
                   <FormMessage />
                   <FormControl>
                     <Input className="bg-white" type="number" placeholder="Children" {...field} />
@@ -206,7 +206,7 @@ function Search() {
               name="rooms"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
-                  <FormLabel className="text-white">Rooms</FormLabel>
+                  <FormLabel className="text-black">Rooms</FormLabel>
                   <FormMessage />
                   <FormControl>
                     <Input className="bg-white" type="number" placeholder="rooms" {...field} />

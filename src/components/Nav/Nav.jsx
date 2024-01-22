@@ -43,7 +43,7 @@ const products = [
 const Nav = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     return(
-        <header className="bg-[#efdcc8]">
+        <header className="bg-[#1d4d16]">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
              aria-label="Global">
             
@@ -52,7 +52,7 @@ const Nav = () => {
             <span className="sr-only">Booking </span>
             <img
               className="h-12 w-auto"
-              src="/images/rentorLogo4.svg"
+              src="/images/rentorSuitability.png"
               alt=""
             />
           </Link>

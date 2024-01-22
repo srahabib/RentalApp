@@ -41,10 +41,10 @@ const trending_data = [
 
 const HeroSection = () => {
     return(
-    <main className="bg-[#efdcc8] pb-10 mb-10">
+    <main className="bg-[#fbfbfa] pb-10 mb-10">
       <section className="max-w-7xl mx-auto p-6">
-        <h2 className="font-bold text-5xl text-white">Find your Next Stay</h2>
-        <h3 className="text-white py-5 text-xl">
+        <h2 className="font-bold text-5xl text-black pt-10">Find your Next Stay</h2>
+        <h3 className="text-black py-5 text-xl">
           Search low prices on hotels, homes and much more...
         </h3>
       </section>

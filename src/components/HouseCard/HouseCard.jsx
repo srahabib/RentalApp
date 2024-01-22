@@ -18,8 +18,8 @@ const HouseCard = () => {
             </div>
             <dl className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
             <dt className="sr-only">Reviews</dt>
-            <dd className="text-sky-300 flex items-center">
-                <svg width="24" height="24" fill="none" aria-hidden="true" className="mr-1 stroke-sky-300">
+            <dd className="text-amber-600 flex items-center">
+                <svg width="24" height="24" fill="none" aria-hidden="true" className="mr-1 stroke-amber-600">
                 <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <span>4.89 <span className="text-slate-400 font-normal">(128)</span></span>
@@ -45,7 +45,7 @@ const HouseCard = () => {
 
             </dl>
             <div className="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
-            <button type="button" className="bg-sky-300 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">Check availability</button>
+            <button type="button" className="bg-amber-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">Check availability</button>
             </div>
             <p className="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:col-span-2 dark:text-slate-400">
             This sunny and spacious room is for those traveling light and looking for a comfy and cosy place to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as Edinburgh Castle and Arthur Seat.
