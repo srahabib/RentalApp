@@ -138,16 +138,16 @@ const Nav = () => {
           </Popover>
 
           <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Flights
+            Rooms
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Car Rentals
+            Rentals
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-white">
             Attractions
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Hotel
+            Apartments
           </a>
         </Popover.Group>
 
@@ -222,13 +222,13 @@ const Nav = () => {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-amber-600"
                 >
-                  Flights
+                  Rooms
                 </a>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-amber-600"
                 >
-                  Car Rentals
+                  Rentals
                 </a>
                 <a
                   href="#"
@@ -240,7 +240,7 @@ const Nav = () => {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-amber-600"
                 >
-                  Hotel
+                  Apartments
                 </a>
               </div>
 
