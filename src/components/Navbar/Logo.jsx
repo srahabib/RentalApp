@@ -9,7 +9,7 @@ const Logo = () => {
     <Image
     //   onClick={() => router.push('/')}
       className="md:block cursor-pointer" 
-      src="/images/logo.png" 
+      src="/images/rentorLogo4.svg" 
       height="100" 
       width="100" 
       alt="Logo" 
