@@ -3,17 +3,23 @@ import Logo from './Logo';
 
 const Navbar = () => {
 
+    const showNav = () => {
+        console.log("clicked");
+        const nav = document.getElementById("navbarSupportedContent13");
+        nav.classList.toggle("hidden");
+
+        
+    }
+
 
     return (
-
-    
 
 <section>
 <nav
     class=" p-2 lg:p-20 relative flex w-full flex-nowrap items-center justify-between bg-white py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-4"
     data-te-navbar-ref>
     <div class="flex w-full flex-wrap items-center justify-between px-3">
-        <button
+        <button onClick={showNav} data-collapse-toggle="navbar-solid-bg"
         class=" block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
         type="button"
         data-te-collapse-init
@@ -64,12 +70,12 @@ const Navbar = () => {
             
             </li>
 
-            <img className="w-5 h-5 " src="/images/rentorLogo4.svg" alt="" />
+            <img className="hidden lg:block w-5 h-5" src="/images/rentorLogo4.svg" alt="" />
             <li
             class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
             data-te-nav-item-ref>
             <a
-                class="pl-5 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                class=" pl-0 lg:pl-5 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 href="#"
                 data-te-nav-link-ref
                 >Home</a
