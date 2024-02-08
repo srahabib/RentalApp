@@ -1,4 +1,3 @@
-import { Divide } from "lucide-react";
 import React from "react";
 import Search from "../components/Search/Search";
 import HouseBlock from "../components/HouseBlock/HouseBlock";
@@ -15,7 +14,8 @@ const SearchPage = () => {
             <HouseBlock/>
             <HouseBlock/>
         </div>
-        <Pagination/>   
+        <Pagination/>
+ 
         </div>
         
     
