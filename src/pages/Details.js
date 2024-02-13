@@ -1,6 +1,8 @@
 import React from 'react';
 import Recommended from '../components/Recommended/Recommended';
 import Sliders from '../components/Slider/Slider';
+import HostCard from '@/components/HostCard/HostCard';
+import DetailsCard from '@/components/DetailsCard/DetailsCard';
 
 
 const Details = () => {
@@ -8,7 +10,10 @@ const Details = () => {
     return (
 
 <div>
-    <Sliders/>
+<Sliders/>
+<HostCard/>
+<DetailsCard/>
+
             
 <div className="p-10">
 <Recommended/>   

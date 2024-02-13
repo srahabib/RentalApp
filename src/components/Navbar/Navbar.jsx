@@ -74,9 +74,9 @@ const Navbar = () => {
             <li
             class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
             data-te-nav-item-ref>
-            <a
+            <a 
                 class=" pl-0 lg:pl-5 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                href="#"
+                href="/"
                 data-te-nav-link-ref
                 >Home</a
             >
@@ -84,7 +84,7 @@ const Navbar = () => {
             <li
             class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
             data-te-nav-link-ref>
-            <a
+            <a href="/Search"
                 class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >Apartments</a
             >
@@ -92,7 +92,7 @@ const Navbar = () => {
             <li
             class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
             data-te-nav-link-ref>
-            <a
+            <a href='/Contact'
                 class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >Contact</a
             >
@@ -102,7 +102,7 @@ const Navbar = () => {
             data-te-nav-link-ref>
             <a
                 class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                >About</a
+                > Login </a
             >
             </li>
         </ul>
