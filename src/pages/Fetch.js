@@ -17,7 +17,7 @@ const Fetch = ({ users }) => {
             {users.map(user => (
                 <div key={user.id}>
                     <h3>{user.email}</h3>
-                    <p>{user.gender}</p>
+                    <p>{user.address}</p>
                 </div>
             ))}
         </div>
