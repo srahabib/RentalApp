@@ -15,7 +15,8 @@ const Details = () => {
 <HostCard/>
 <DetailsCard/>
 
-<Reviews/>            
+<Reviews/>  
+<Reviews/>          
 <div className="p-10">
 <Recommended/>   
 </div>
