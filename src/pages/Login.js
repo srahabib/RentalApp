@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { useRouter } from 'next/router'
 
 
+
 const Login = () => {
 
   const router = useRouter()
@@ -22,14 +23,19 @@ const Login = () => {
     console.log(username, password)
  
     if (response.ok) {
-      console.log('Logged in!') 
-      router.push('/')
-    } else {
-      // Handle errors
-        console.error('Failed to log in')
-    }
+        const data = await response.json();
+        const { access_token } = data; // Extract access_token from the response
 
-    }
+        // Save the access token as a cookie
+        document.cookie = `accessToken=${access_token}; path=/`;
+
+        console.log('Logged in!');
+        router.push('/');
+      } else {
+        console.error('Failed to log in');
+      }
+  }
+
 
 
 
@@ -72,12 +78,13 @@ const Login = () => {
                     <div>
                         <button className="bg-amber-600 w-full py-2 rounded-md text-white font-bold cursor-pointer hover:bg-amber-500" type="submit">Login</button>
                     </div>
-                    <div>
-                        <p className="text-center">Or continue with</p>
+                    <div className="flex">
+                        <p className="text-center">Don't have and account ?</p>
+                        <p className="text-center font-bold text-blue pl-1"> <a href="/Register2">Sign up</a></p>
                     </div>
-                    <div className="flex gap-4">
+                   {/* <div className="flex gap-4">
                         <button type="submit" className="bg-[#c71610] w-full py-1 rounded-md text-white font-bold cursor-pointer hover:bg-red-600">Gmail</button>
-                    </div>
+                    </div>*/}
                 </form>
             </div>
         </div>

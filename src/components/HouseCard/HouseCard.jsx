@@ -20,7 +20,7 @@ const HouseCard = () => {
             <dt className="sr-only">Reviews</dt>
             <dd className="text-amber-600 flex items-center">
                 <svg width="24" height="24" fill="none" aria-hidden="true" className="mr-1 stroke-amber-600">
-                <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="m12 5 2 5h5l-4 4 2.103 5L12 16l-5.103 3L9 14l-4-4h5l2-5Z"  stroke-width="2" stroke-linecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>4.89 <span className="text-slate-400 font-normal">(128)</span></span>
             </dd>
@@ -29,7 +29,7 @@ const HouseCard = () => {
                 <svg width="2" height="2" aria-hidden="true" fill="currentColor" className="mx-3 text-slate-300">
                 <circle cx="1" cy="1" r="1" />
                 </svg>
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" strokeLinejoin="round" className="mr-1 text-slate-400 dark:text-slate-500" aria-hidden="true">
                 <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
                 <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
                 </svg>
