@@ -2,7 +2,7 @@ import react from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; 
 
-const HouseCard = () => {
+const HouseCard = ({ title, location, description, imageUrl, price }) => {
     return (
         <div className="py-6 px-6 sm:p-6 md:py-10 md:px-1 lg:px-0">
         <div className="max-w-4xl mx-auto grid grid-cols-1">
@@ -13,7 +13,7 @@ const HouseCard = () => {
 
             <div className="grid gap-4 col-start-1 col-end-3 row-start-1 lg:mb-6 sm:grid-cols-4">
         
-            <Image src="/images/img6.jpg" alt="" className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-full lg:col-span-full" loading="lazy" width={500} height={300}/>
+            <Image src={"/images/" + "img6.jpg"} alt="" className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-full lg:col-span-full" loading="lazy" width={500} height={300}/>
 
             </div>
             <dl className="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
@@ -39,7 +39,7 @@ const HouseCard = () => {
             <dt className="sr-only">Price</dt>
             <dd className="flex items-center">
             <img className="m-2 pl-2" width="24" height="24" src="https://img.icons8.com/ios/50/price-tag--v1.png" alt="price-tag--v1"/>
-                $119 / night
+               {price} / night
             </dd>
 
 
@@ -53,7 +53,7 @@ const HouseCard = () => {
 
 
             <p className="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:col-span-2 dark:text-slate-400">
-            This sunny and spacious room is for those traveling light and looking for a comfy and cosy place to lay their head for a night or two. This beach house sits in a vibrant neighborhood littered with cafes, pubs, restaurants and supermarkets and is close to all the major attractions such as Edinburgh Castle and Arthur Seat.
+            {description}
             </p>
         </div>
         </div>
