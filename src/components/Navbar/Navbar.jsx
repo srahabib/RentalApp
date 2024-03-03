@@ -1,15 +1,49 @@
-import React from 'react';
-import Logo from './Logo';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track if the user is logged in
+    const [userPhoto, setUserPhoto] = useState(null); // State to store user's photo
+    const router = useRouter();
+
+    useEffect(() => {
+        // Check if user is logged in by reading cookies
+        const accessToken = getCookie('accessToken');
+        setIsLoggedIn(accessToken ? true : false);
+
+        // Fetch user photo if user is logged in
+        if (accessToken) {
+            // Fetch user's photo from your server or API for now we're using a default image
+            fetchUserPhoto();
+        }
+    }, []);
+
+    // Function to get cookie value by name
+    const getCookie = (name) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    };
+
+
+    // Function to fetch user photo
+    const fetchUserPhoto = async () => {
+        // Assuming you have a static URL for the user icon
+        const userIconUrl = '/images/img6.jpg';
+        setUserPhoto(userIconUrl);
+      
+    };
+
+    
 
     const showNav = () => {
-        console.log("clicked");
-        const nav = document.getElementById("navbarSupportedContent13");
-        nav.classList.toggle("hidden");
-
-        
-    }
+        const nav = document.getElementById('navbarSupportedContent13');
+        if (nav.style.display === 'none') {
+            nav.style.display = 'block';
+        } else {
+            nav.style.display = 'none';
+        }
+    };
 
 
     return (
@@ -64,8 +98,6 @@ const Navbar = () => {
                 href="#"
                 data-te-nav-link-ref
                 >
-                    
-
                 </a>
             
             </li>
@@ -81,6 +113,7 @@ const Navbar = () => {
                 >Home</a
             >
             </li>
+            
             <li
             class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
             data-te-nav-link-ref>
@@ -100,7 +133,7 @@ const Navbar = () => {
             <li
             class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
             data-te-nav-link-ref>
-            <a
+            <a  href='/Login'
                 class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 > Login </a
             >
@@ -125,7 +158,13 @@ const Navbar = () => {
             </div>
         </div>
         </div>
+        <div className={!isLoggedIn ? "mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto" : "mt-2 flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"}>
+            {isLoggedIn && (
+                <img src={userPhoto} className="w-10 h-10 rounded-full mr-2" alt="User Icon"/>
+            )}
+            </div>
     </div>
+    
 </nav>
 
     </section>

@@ -30,7 +30,8 @@ const Login = () => {
         document.cookie = `accessToken=${access_token}; path=/`;
 
         console.log('Logged in!');
-        router.push('/');
+        window.location.pathname = '/';
+
       } else {
         console.error('Failed to log in');
       }
