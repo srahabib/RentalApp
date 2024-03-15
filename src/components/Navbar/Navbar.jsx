@@ -172,8 +172,11 @@ const Navbar = () => {
             </button>
             </div>
         </div>
-        </div>
-        <div className={!isLoggedIn ? "mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto" : "mt-2 flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"}>
+
+    </div>
+</div>
+    
+    <div className={!isLoggedIn ? "mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto" : "mt-2 flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"}>
             {isLoggedIn && (
         <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button onClick={opendropdown} type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
@@ -205,8 +208,6 @@ const Navbar = () => {
             )}
 
             </div>
-    </div>
-    
 </nav>
 
     </section>
