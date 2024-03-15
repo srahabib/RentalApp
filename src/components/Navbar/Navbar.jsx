@@ -29,12 +29,10 @@ const Navbar = () => {
     // Function to fetch user photo
     const fetchUserPhoto = async () => {
         // Assuming you have a static URL for the user icon
-        const userIconUrl = '/images/img6.jpg';
+        const userIconUrl = '/images/Host.jpg';
         setUserPhoto(userIconUrl);
       
     };
-
-    
 
     const showNav = () => {
         const nav = document.getElementById('navbarSupportedContent13');
@@ -42,6 +40,22 @@ const Navbar = () => {
             nav.style.display = 'block';
         } else {
             nav.style.display = 'none';
+        }
+    };
+
+    // Function to handle logout
+    const handleLogout = () => {
+        // Clear the access token
+        document.cookie = 'accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        window.location.reload();
+    };
+
+    const opendropdown = () => {
+        const dropdown = document.getElementById('user-dropdown');
+        if (dropdown.style.display === 'none') {
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
         }
     };
 
@@ -54,7 +68,7 @@ const Navbar = () => {
     data-te-navbar-ref>
     <div class="flex w-full flex-wrap items-center justify-between px-3">
         <button onClick={showNav} data-collapse-toggle="navbar-solid-bg"
-        class=" block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+        class=" block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none dark:text-neutral-200 lg:hidden"
         type="button"
         data-te-collapse-init
         data-te-target="#navbarSupportedContent13"
@@ -138,6 +152,7 @@ const Navbar = () => {
                 > Login </a
             >
             </li>
+            
         </ul>
         <div class="w-[300px] lg:pr-2">
             <div class="relative flex w-full flex-wrap items-stretch">
@@ -149,7 +164,7 @@ const Navbar = () => {
                 aria-describedby="button-addon3" />
 
             <button
-                class="relative z-[2] rounded-r border-2 border-primary px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 motion-reduce:transition-none"
+                class="relative z-[2] rounded-r border-2 border-primary px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none motion-reduce:transition-none"
                 type="button"
                 id="button-addon3"
                 data-te-ripple-init>
@@ -160,8 +175,35 @@ const Navbar = () => {
         </div>
         <div className={!isLoggedIn ? "mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto" : "mt-2 flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"}>
             {isLoggedIn && (
-                <img src={userPhoto} className="w-10 h-10 rounded-full mr-2" alt="User Icon"/>
+        <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button onClick={opendropdown} type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+        <span class="sr-only">Open user menu</span>
+        <img class="w-8 h-8 rounded-full" src={userPhoto} alt="user photo"/>
+      </button>
+
+      <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+        <div class="px-4 py-3">
+          <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+          <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+        </div>
+        <ul class="py-2" aria-labelledby="user-menu-button">
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+          </li>
+          <li>
+            <a onClick={handleLogout} href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+          </li>
+        </ul>
+      </div>
+    </div>    
             )}
+
             </div>
     </div>
     
