@@ -82,10 +82,10 @@ const Navbar = () => {
                 </div>
 
                 {isLoggedIn && (
-                        <div className="relative ml-4">
+                        <div className="relative ml-4 pr-8">
                             <button onClick={toggleDropdown} type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false">
                                 <span className="sr-only">Open user menu</span>
-                                <img className="w-8 h-8 rounded-full" src={userPhoto} alt="user photo" />
+                                <img className="w-8 h-8  rounded-full" src={userPhoto} alt="user photo" />
                             </button>
                             {showDropdown && (
                                 <div className="absolute right-0 mt-2 z-50 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
@@ -113,15 +113,18 @@ const Navbar = () => {
                         </div>
                     )}
 
+                </div>
 
-                <div className="md:hidden">
+                {/* Mobile Navigation */}
+                
+                <div className="md:hidden absolute top-0 right-0 m-4">
                     <button onClick={toggleNav} className="block text-gray-700 dark:text-white">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
-            </div>
+            
 
             {/* Mobile Navigation */}
             <div className={`md:hidden ${showNav ? 'block' : 'hidden'}`}>
