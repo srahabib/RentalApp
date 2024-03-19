@@ -50,13 +50,13 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
                 <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="images/rentorLogo4.svg" className="h-8" alt="Flowbite Logo" />
+                    <img src="images/rentorLogo4.svg" className="h-8 pr-5" alt="Flowbite Logo" />
                 </a>
 
-                <div className="hidden md:flex items-center space-x-4 ">
-                    <ul className="flex flex-row items-center space-x-4">
+                <div className="hidden md:flex items-center space-x-4 flex-grow">
+                    <ul className="flex flex-row items-center space-x-4 ">
                         <li>
                             <a href="#" className="text-gray-700 dark:text-white">Home</a>
                         </li>
@@ -129,7 +129,7 @@ const Navbar = () => {
             {/* Mobile Navigation */}
             <div className={`md:hidden ${showNav ? 'block' : 'hidden'}`}>
                 
-                <ul className="flex flex-col items-center mt-4 space-y-4">
+                <ul className="flex flex-col items-center mt-4 space-y-4 ">
                     <li>
                         <a href="#" className="text-gray-700 dark:text-white">Home</a>
                     </li>
