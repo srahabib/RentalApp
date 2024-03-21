@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import react from "react";
+import { useEffect, useRef, useState } from "react";
 
 const REACT_APP_GOOGLE_MAPS_KEY = "AIzaSyAhcXdT801aTtpJAzoP1eBM3fVt3mtyQ-8";
 let autoComplete;
