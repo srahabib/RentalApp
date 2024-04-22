@@ -7,18 +7,70 @@ const Navbar = () => {
     const [showDropdown, setShowDropdown] = useState(false); // State to manage dropdown visibility
     const [showNav, setShowNav] = useState(false); // State to manage mobile navigation visibility
     const router = useRouter();
+    const [userData, setUserData] = useState(null);
+
 
     useEffect(() => {
         // Check if user is logged in by reading cookies
         const accessToken = getCookie('accessToken');
         setIsLoggedIn(accessToken ? true : false);
-
-        // Fetch user photo if user is logged in
+    
+        // Fetch user photo and additional data if user is logged in
         if (accessToken) {
             // Fetch user's photo from your server or API for now we're using a default image
             fetchUserPhoto();
+    
+            // Fetch user data
+            fetchUserData();
         }
     }, []);
+    
+    // Function to fetch user data
+// Function to fetch user data
+// Function to fetch user data
+const fetchUserData = async () => {
+    try {
+        const accessToken = getCookie('accessToken');
+        if (!accessToken) {
+            throw new Error('Access token not found');
+        }
+
+        const response = await fetch('https://rentor-b.onrender.com/user/all', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${accessToken}`,
+                'Content-Type': 'application/json'
+            },
+        });
+        if (!response.ok) {
+            throw new Error('Failed to fetch user data');
+        }
+        const allUserData = await response.json();
+        const loggedInUserEmail = getLoggedInUserEmail(allUserData);
+        const loggedInUserData = allUserData.find(user => user.email === loggedInUserEmail);
+        
+        console.log('Logged-in user data:', loggedInUserData);
+        setUserData(loggedInUserData);
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+    }
+};
+
+// Function to get the email of the logged-in user
+const getLoggedInUserEmail = (allUserData) => {
+    const accessToken = getCookie('accessToken');
+    if (!accessToken) {
+        return null;
+    }
+    // Extract and decode the JWT token payload
+    const tokenPayload = accessToken.split('.')[1];
+    const decodedPayload = atob(tokenPayload);
+    const { email } = JSON.parse(decodedPayload);
+    return email;
+};
+
+
+    
 
     // Function to get cookie value by name
     const getCookie = (name) => {
@@ -90,8 +142,8 @@ const Navbar = () => {
                             {showDropdown && (
                                 <div className="absolute right-0 mt-2 z-50 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                                     <div className="px-4 py-3">
-                                        <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                                        <span className="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                                        <span className="block text-sm text-gray-900 dark:text-white">{userData ? userData.firstName : 'User'}</span>
+                                        <span className="block text-sm text-gray-500 truncate dark:text-gray-400">{userData ? userData.email : 'email@example.com'}</span>
                                     </div>
                                     <ul className="py-2" aria-labelledby="user-menu-button">
                                         <li>
