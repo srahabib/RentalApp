@@ -1,7 +1,6 @@
 import React from "react";
 import Search from "../components/Search/Search";
-import HouseBlock from "../components/HouseBlock/HouseBlock";
-import Pagination from "../components/Pagination/Pagination";
+import HouseBlock2 from "../components/HouseBlock2/HouseBlock2";
 
 
 const SearchPage = () => {
@@ -11,11 +10,9 @@ const SearchPage = () => {
             <Search />
 
         <div>
-            <HouseBlock/>
-            <HouseBlock/>
+            <HouseBlock2/>
         </div>
-        <Pagination/>
- 
+
         </div>
         
     
