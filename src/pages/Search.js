@@ -12,7 +12,7 @@ const SearchPage = () => {
 
         <div>
             <HouseBlock/>
-            <HouseBlock/>
+
         </div>
         <Pagination/>
  

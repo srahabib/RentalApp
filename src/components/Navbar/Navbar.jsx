@@ -103,23 +103,24 @@ const getLoggedInUserEmail = (allUserData) => {
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
-                <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="images/rentorLogo4.svg" className="h-8 pr-5" alt="Flowbite Logo" />
                 </a>
 
                 <div className="hidden md:flex items-center space-x-4 flex-grow">
                     <ul className="flex flex-row items-center space-x-4 ">
                         <li>
-                            <a href="#" className="text-gray-700 dark:text-white">Home</a>
+                            <a href="/" className="text-gray-700 dark:text-white">Home</a>
+                        </li>
+                       
+                        <li>
+                            <a href="/Search" className="text-gray-700 dark:text-white">Apartments</a>
                         </li>
                         <li>
-                            <a href="#" className="text-gray-700 dark:text-white">About</a>
+                            <a href="/About" className="text-gray-700 dark:text-white">About</a>
                         </li>
                         <li>
-                            <a href="#" className="text-gray-700 dark:text-white">Apartments</a>
-                        </li>
-                        <li>
-                            <a href="#" className="text-gray-700 dark:text-white">Contact</a>
+                            <a href="/Contact" className="text-gray-700 dark:text-white">Contact</a>
                         </li>
 
                         {!isLoggedIn && (
@@ -183,16 +184,16 @@ const getLoggedInUserEmail = (allUserData) => {
                 
                 <ul className="flex flex-col items-center mt-4 space-y-4 ">
                     <li>
-                        <a href="#" className="text-gray-700 dark:text-white">Home</a>
+                        <a href="/" className="text-gray-700 dark:text-white">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Search" className="text-gray-700 dark:text-white">Apartments</a>
                     </li>
                     <li>
                         <a href="#" className="text-gray-700 dark:text-white">About</a>
                     </li>
                     <li>
-                        <a href="#" className="text-gray-700 dark:text-white">Apartments</a>
-                    </li>
-                    <li>
-                        <a href="#" className="text-gray-700 dark:text-white">Contact</a>
+                        <a href="/Contact" className="text-gray-700 dark:text-white">Contact</a>
                     </li>
 
                 </ul>
