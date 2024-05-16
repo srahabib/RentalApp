@@ -1,6 +1,4 @@
-// pages/property/[id].js
 import React from 'react';
-import { useRouter } from 'next/router';
 import Recommended from '../../components/Recommended/Recommended';
 import Sliders from '../../components/Slider/Slider';
 import HostCard from '../../components/HostCard/HostCard';
@@ -11,10 +9,16 @@ const PropertyDetails = ({ property }) => {
     return <div>Loading...</div>;
   }
 
+  const formattedDate = new Date(property.createdAt).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <div>
       <Sliders />
-      <HostCard />
+      {/* <HostCard /> */}
       <div className="bg-gray-100 pt-10 dark:bg-gray-800 transition-colors duration-300">
         <div className="bg-gray-100 dark:bg-gray-800 transition-colors duration-300" />
         <div className="container mx-auto p-4">
@@ -36,7 +40,8 @@ const PropertyDetails = ({ property }) => {
                     clipRule="evenodd"
                   />
                 </svg>
-                {property.location}
+                {property.street_address} , {property.city}
+                
               </span>
             </p>
 
@@ -50,19 +55,25 @@ const PropertyDetails = ({ property }) => {
                     Published Date
                   </dt>
                   <dd className="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
-                    {property.publishedDate}
+                  {formattedDate}
                   </dd>
                 </div>
                 <div className="bg-white px-2 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                  <dt className="text-lg font-medium text-gray-500">Price Range</dt>
+                  <dt className="text-lg font-medium text-gray-500">Price</dt>
                   <dd className="mt-1 text-lg font-bold text-red-500 sm:mt-0 sm:col-span-2">
                     {property.price}
                   </dd>
                 </div>
                 <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                  <dt className="text-lg font-medium text-gray-500">Advertise Status:</dt>
+                  <dt className="text-lg font-medium text-gray-500">Furnished:</dt>
                   <dd className="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
-                    {property.status}
+                    {property.furnished}
+                  </dd>
+                </div>
+                <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                  <dt className="text-lg font-medium text-gray-500">Floor:</dt>
+                  <dd className="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
+                    {property.floor_location}
                   </dd>
                 </div>
                 <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
@@ -74,13 +85,19 @@ const PropertyDetails = ({ property }) => {
                 <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
                   <dt className="text-lg font-medium text-gray-500">Rooms:</dt>
                   <dd className="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
-                    {property.rooms}
+                    {property.num_rooms}
+                  </dd>
+                </div>
+                <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                  <dt className="text-lg font-medium text-gray-500">Bath Rooms:</dt>
+                  <dd className="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
+                    {property.num_bath_rooms}
                   </dd>
                 </div>
                 <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
                   <dt className="text-lg font-medium text-gray-500">Gross / Net M²:</dt>
                   <dd className="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
-                    {property.grossArea}M² / {property.netArea}M²
+                    {property.area}M²
                   </dd>
                 </div>
               </dl>
@@ -96,36 +113,11 @@ const PropertyDetails = ({ property }) => {
         </div>
         <div className="bg-gray-100 dark:bg-gray-800 transition-colors duration-300" />
         <div className="container mx-auto p-4">
-          <div className="bg-white dark:bg-gray-700 shadow rounded-lg p-6">
+          {/* <div className="bg-white dark:bg-gray-700 shadow rounded-lg p-6">
             <h1 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
               Internal & External Features
             </h1>
-            <div className="grid grid-cols-2 gap-4">
-              {property.features.map((feature, index) => (
-                <div key={index}>
-                  <p>
-                    <span className="inline-flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="m4.5 12.75 6 6 9-13.5"
-                        />
-                      </svg>
-                      {feature}
-                    </span>
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+          </div> */}
         </div>
         <Reviews />
         <div className="p-5">

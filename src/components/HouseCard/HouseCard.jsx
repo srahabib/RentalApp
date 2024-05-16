@@ -2,7 +2,7 @@ import react from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; 
 
-const HouseCard = ({ title, location, description, imageUrl, price }) => {
+const HouseCard = ({ id, title, location, description, imageUrl, price }) => {
     return (
         <div className="py-6 px-6 sm:p-6 md:py-10 md:px-1 lg:px-0">
         <div className="max-w-4xl mx-auto grid grid-cols-1">
@@ -46,7 +46,7 @@ const HouseCard = ({ title, location, description, imageUrl, price }) => {
             </dl>
             <div className="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
                     {/* Use Link from next/link for navigation */}
-                    <Link href="/Details">
+                    <Link href={`/property/${id}`}>
                         <span className="bg-amber-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">Check availability</span>
                     </Link>
             </div>
