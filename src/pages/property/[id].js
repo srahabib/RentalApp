@@ -1,7 +1,6 @@
 import React from 'react';
 import Recommended from '../../components/Recommended/Recommended';
 import Sliders from '../../components/Slider/Slider';
-import HostCard from '../../components/HostCard/HostCard';
 import Reviews from '../../components/Reviews/Reviews';
 
 const PropertyDetails = ({ property }) => {
