@@ -152,7 +152,7 @@ dark:after:border-gray-700">
 <div className="bg-gray-100  dark:bg-gray-800 transition-colors duration-300" />
     <div className="container mx-auto p-4">
         <div className="bg-white dark:bg-gray-700 shadow rounded-lg p-6">
-            <h1 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Explanation</h1>
+            <h1 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Description</h1>
             <p class="text-gray-500 text-xl">This sunny and spacious room is for those traveling light and looking for a comfy 
     and cosy place to lay their head for a night or two. This beach house sits
     in a vibrant neighborhood littered with cafes, pubs, restaurants and supermarkets 

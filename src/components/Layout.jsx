@@ -6,9 +6,6 @@ import Hero from './Hero/Hero'
 import Nav from './Nav/Nav'
 
 
-
-
-
 const Layout = ({children}) => {
   return (
     <>
