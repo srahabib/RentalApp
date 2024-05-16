@@ -2,7 +2,6 @@ import React from 'react';
 import Recommended from '../components/Recommended/Recommended';
 import Sliders from '../components/Slider/Slider';
 import HostCard from '@/components/HostCard/HostCard';
-import DetailsCard from '@/components/DetailsCard/DetailsCard';
 import Reviews from '@/components/Reviews/Reviews';
 
 
@@ -32,21 +31,8 @@ const Details = () => {
         </span>
         </p>
 
-        <div class="bg-white px-2 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                <dt class="text-lg font-medium text-gray-500">
-                Price Range           
-                </dt>
-                <dd class="mt-1 text-lg font-bold text-red-500 sm:mt-0 sm:col-span-2">
-                    250 : 400 
-                </dd>
-            </div>
-
         <h2 class="text-xl font-semibold mb-4 text-gray-900 mt-10 dark:text-gray-100">General Information</h2>
         <div class="text-gray-500">
-
-
-
-
 
         <dl>
 
@@ -56,6 +42,14 @@ const Details = () => {
                 </dt>
                 <dd class="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
                     2nd March 2024
+                </dd>
+            </div>
+            <div class="bg-white px-2 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                <dt class="text-lg font-medium text-gray-500">
+                Price Range           
+                </dt>
+                <dd class="mt-1 text-lg font-bold text-red-500 sm:mt-0 sm:col-span-2">
+                    400 
                 </dd>
             </div>
             <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
