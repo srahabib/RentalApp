@@ -1,6 +1,6 @@
-import HouseBlock from "@/components/HouseBlock/HouseBlock";
+import HouseBlock from "../components/HouseBlock/HouseBlock";
 import React from "react";
-import Pagination from "@/components/Pagination/Pagination";
+import Pagination from "../components/Pagination/Pagination";
 import HostCard from "@/components/HostCard/HostCard";
 
 
