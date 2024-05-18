@@ -1,6 +1,6 @@
 import React from "react";
-import HouseBlock from "@/components/HouseBlock/HouseBlock";
-import Pagination from "@/components/Pagination/Pagination";
+import HouseBlock from "../components/HouseBlock/HouseBlock";
+import Pagination from "../components/Pagination/Pagination";
 
 const GuestSelectedProperties = () => {
     return (
