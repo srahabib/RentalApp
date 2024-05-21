@@ -1,13 +1,14 @@
+import React from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { Button } from "../components/ui/button";
+import { Button } from "@/components/ui/button";
 import { BedDoubleIcon, CalendarIcon } from "lucide-react";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "../components/ui/popover";
+} from "@/components/ui/popover";
 import { format } from "date-fns";
 
 import {
@@ -17,10 +18,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../components/ui/form";
-import { Input } from "../components/ui/input";
-import { cn } from "../lib/utils";
-import { Calendar } from "../components/ui/calendar";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
 
 export const formSchema = z.object({
   location: z.string().min(2).max(50),
