@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Bar1 from "@/components/FormHero/BarAd";
+import Bar1 from "../components/FormHero/BarAd";
 import { useRouter } from "next/router";
 import UploadImage from "@/components/UploadImage/UploadImage";
-import MyGoogleMap from "@/components/Map/GoogleMapComponent";
+import MyGoogleMap from "../components/Map/GoogleMapComponent";
 import { images } from "../../next.config";
 
 const PropertyDetails = () => {
