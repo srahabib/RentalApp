@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Bar2 from "@/components/FormHero/Bar2";
+import Bar2 from "../components/FormHero/Bar2";
 import { useRouter } from "next/router";
 import axios from "axios";
 

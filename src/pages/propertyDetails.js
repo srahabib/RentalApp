@@ -1,6 +1,6 @@
 import React from "react";
 import{useRouter} from 'next/router'
-import UploadImage from '@/components/UploadImage/UploadImage';
+import UploadImage from '../components/UploadImage/UploadImage';
 
 
 const PropertyDetails = () => {

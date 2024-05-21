@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Bar3 from "@/components/FormHero/Bar3";
+import Bar3 from "../components/FormHero/Bar3";
 
 const Published = () => {
   const router = useRouter();
