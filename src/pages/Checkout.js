@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 function Checkout() {
 
   const [price, setPrice] = useState(0);
-  //const [paymentLink, setPaymentLink] = useState(null);
+  const [paymentLink, setPaymentLink] = useState(null);
 
   useEffect(() => {
     // Extract price from URL parameter
@@ -31,6 +31,8 @@ function Checkout() {
 
       const data = await response.json();
       setPaymentLink(data.checkoutLink);
+
+      console.log(data.checkoutLink)
 
     // Redirect the user to the payment link
     window.location.href = data.checkoutLink;
@@ -265,7 +267,7 @@ function Checkout() {
           </div>
         </div>
 
-        <div class="space-y-4">
+         <div class="space-y-4">
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white"> Document Delivery Methods</h3>
 
           <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -329,7 +331,7 @@ function Checkout() {
 
             <dl class="flex items-center justify-between gap-4 py-3">
               <dt class="text-base font-normal text-gray-500 dark:text-gray-400">Promotion</dt>
-              <dd class="text-base font-medium text-green-500">-0</dd>
+              <dd class="text-base font-medium text-amber-500">-0</dd>
             </dl>
 
             <dl class="flex items-center justify-between gap-4 py-3">
@@ -349,7 +351,10 @@ function Checkout() {
           </div>
 
         </div>
-        <Button onClick={handleProceedToPayment} >Proceed to payment</Button>
+
+        
+        <a className='inline-block px-4 py-2 text-white bg-amber-500 rounded hover:bg-amber-700 cursor-pointer' onClick={handleProceedToPayment} >Proceed to payment</a>
+
         
         <div class="space-y-3">
           <button type="submit" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Proceed to Payment</button>
