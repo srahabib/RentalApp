@@ -2,8 +2,25 @@ import React from 'react';
 import Recommended from '../../components/Recommended/Recommended';
 import Sliders from '../../components/Slider/Slider';
 import Reviews from '../../components/Reviews/Reviews';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router';
 
 const PropertyDetails = ({ property }) => {
+
+  const router = useRouter();
+
+  const handleChatRedirect = () => {
+    router.push('/Chat'); // Replace '/target-page' with the path to the desired page
+  };
+
+  const handleRentRedirect = () => {
+    router.push({
+      pathname: '/Checkout',
+      query: { price: property.price, propertyId: property.id } // Replace '/Checkout' with the path to your checkout page
+    });
+  };
+
+
   if (!property) {
     return <div>Loading...</div>;
   }
@@ -43,6 +60,29 @@ const PropertyDetails = ({ property }) => {
                 
               </span>
             </p>
+            
+            <div className=" p-6 dark:bg-gray-800 relative ">
+            <div className=" absolute top-0 right-0 flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+                <img src="/images/Host.jpg" alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
+                <div className="space-y-4 text-center divide-y dark:divide-gray-300">
+                  <div className="my-2 space-y-1">
+                    <h2 className="text-xl font-semibold sm:text-2xl">Leroy Jenkins</h2>
+                    <p className="px-5 text-xs sm:text-base dark:text-gray-600">Mother of two, I love pets</p>
+                  </div>
+                  <div className="flex justify-center pt-2 space-x-4 align-center">
+                    <Button onClick={handleRentRedirect}> Rent Property </Button>
+                    <Button onClick={handleChatRedirect} >Message
+   
+                    <a rel="noopener noreferrer" href="#" aria-label="Email" className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600">
+                      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 fill-current">
+                        <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
+                      </svg>
+                    </a>
+                    </Button>
+                  </div>
+                </div>
+            </div>
+            </div>
 
             <h2 className="text-xl font-semibold mb-4 text-gray-900 mt-10 dark:text-gray-100">
               General Information
@@ -61,12 +101,6 @@ const PropertyDetails = ({ property }) => {
                   <dt className="text-lg font-medium text-gray-500">Price</dt>
                   <dd className="mt-1 text-lg font-bold text-red-500 sm:mt-0 sm:col-span-2">
                     {property.price}
-                  </dd>
-                </div>
-                <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                  <dt className="text-lg font-medium text-gray-500">Furnished:</dt>
-                  <dd className="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
-                    {property.furnished}
                   </dd>
                 </div>
                 <div className="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
@@ -117,8 +151,9 @@ const PropertyDetails = ({ property }) => {
               Internal & External Features
             </h1>
           </div> */}
+          {/* <Reviews /> */}
         </div>
-        <Reviews />
+        
         <div className="p-5">
           <Recommended />
         </div>
