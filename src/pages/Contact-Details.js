@@ -1,17 +1,10 @@
 import React from "react";
-import{useRouter} from 'next/router'
-import { Label } from "flowbite-react";
 
 
 const ContactDetails = () => {
-    const router = useRouter()
-    const handleClick=()=>{
-        router.push('/Published')
-    }
 
     return (
-        <main>
-
+<main>
 
 <div class="bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
     <div class="container mx-auto p-4">
@@ -56,16 +49,11 @@ const ContactDetails = () => {
                         <input id="dropzone-file" type="file" class="hidden" />
                     </label>
                 </div> 
-
-
                 <div>
-                    <button type="submit" class="bg-amber-600 text-white p-3 rounded">Submit</button>
+                    <a href="/documentssent" type="submit" class="bg-amber-600 text-white p-3 rounded">Submit</a>
                 </div>
             </form>
         </div>
-
-
-
 
 <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css" />
 

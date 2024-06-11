@@ -3,7 +3,7 @@ import React from 'react'
 function Verification() {
   return (
     <div className='p-20'>
-        <div>
+    <div>
     {/* <!-- Table --> */}
     <div class="flex flex-col">
     <div class="overflow-x-auto rounded-lg">

@@ -42,7 +42,6 @@ const HouseCard = ({ id, title, location, description, imageUrl, price }) => {
                {price} / night
             </dd>
 
-
             </dl>
             <div className="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
                     {/* Use Link from next/link for navigation */}
@@ -50,7 +49,6 @@ const HouseCard = ({ id, title, location, description, imageUrl, price }) => {
                         <span className="bg-amber-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">Check availability</span>
                     </Link>
             </div>
-
 
             <p className="mt-4 text-sm leading-6 col-start-1 sm:col-span-2 lg:col-span-2 dark:text-slate-400">
             {description}

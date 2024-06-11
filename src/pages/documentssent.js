@@ -8,12 +8,12 @@ const paymentDone = () => {
                     </path>
                 </svg>
                 <div class="text-center">
-                    <h3 class="md:text-2xl text-base text-gray-900 font-semibold text-center">Payment Done!</h3>
-                    <p class="text-gray-600 my-2">Thank you for completing your secure online payment.</p>
+                    <h3 class="md:text-2xl text-base text-gray-900 font-semibold text-center">The documents have been successfully sent</h3>
+                    <p class="text-gray-600 my-2">Thank you for completing your application process we will contact you via email once verification is done </p>
                     <p> Have a great day!  </p>
                     <div class="py-10 text-center">
                         <a href="#" class="px-12 bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3">
-                            GO BACK 
+                            Go Back 
                        </a>
                     </div>
                 </div>
