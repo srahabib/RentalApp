@@ -2,10 +2,10 @@ import React from 'react'
 
 function Verification() {
   return (
-    <div>
+    <div className='p-20'>
         <div>
     {/* <!-- Table --> */}
-    <div class="flex flex-col mt-6">
+    <div class="flex flex-col">
     <div class="overflow-x-auto rounded-lg">
       <div class="inline-block min-w-full align-middle">
         <div class="overflow-hidden shadow sm:rounded-lg">

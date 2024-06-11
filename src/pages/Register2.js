@@ -81,9 +81,10 @@ const Register = () => {
   };
 
   return (
+    <div className="bg-[#F9FAFB] p-10">
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="max-w-md mx-auto mt-4 p-3 bg-gray-50 rounded shadow-xl"
+      className="max-w-md mx-auto mt-4 p-3 bg-white rounded shadow-xl"
     >
       {/* Form fields */}
       <div className="mb-4 text-center">
@@ -244,6 +245,7 @@ const Register = () => {
         Sign Up
       </button>
     </form>
+    </div>
   );
 };
 
