@@ -136,7 +136,7 @@ const getLoggedInUserEmail = (allUserData) => {
                 
                 {isLoggedIn && (
                     <div className='flex flex-row '>
-                    <a href="/Contact-Details" className='text-amber-500 font-bold text-xs mt-2'>Become a Host</a>
+                    <a href="/Contact-Details" className='text-amber-500 font-bold text-xs mt-2'>Become an Owner</a>
                         <div className="relative ml-4 pr-8">
                             
                             <button onClick={toggleDropdown} type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false">
