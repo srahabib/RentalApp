@@ -124,22 +124,6 @@ const getLoggedInUserEmail = (allUserData) => {
         setShowNav(!showNav);
     };
 
-    // Function to toggle between 'owner' and 'user' roles
-    const handleRoleSwitch = () => {
-        setUserRole(prevRole => prevRole === 'owner' ? 'user' : 'owner');
-    };
-
-    // Function to handle the link redirection before becoming an owner
-    const handleLinkRedirection = () => {
-        
-        if (userRole !== 'owner') {
-            window.location.href = '/Contact-Details';
-        } else {
-            // Handle switching to owner action
-            handleRoleSwitch();
-        }
-    };
-
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
@@ -164,13 +148,15 @@ const getLoggedInUserEmail = (allUserData) => {
                         </li>
 
                         </ul>
+
+ 
                     </div>
                 
                 {isLoggedIn && (
-                     <div className='flex flex-row '>
-                     <a  className='text-amber-500 font-bold text-xs mt-2' onClick={handleRoleSwitch}>
-                         {userRole === 'owner' ? 'Switch to User' : 'Become an Owner'}
-                     </a>
+                    <div className='flex flex-row '>
+                    <a href="/Contact-Details" className='text-amber-500 font-bold text-xs mt-2'>
+                        {userRole === 'owner' ? 'Switch to User' : 'Become an Owner'}
+                    </a>
                         <div className="relative ml-4 pr-8">
                             
                             <button onClick={toggleDropdown} type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false">

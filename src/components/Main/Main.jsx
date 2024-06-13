@@ -8,41 +8,45 @@ import NewsBlocks from '../NewsBlocks/NewsBlocks'
 const Main = () => {
   return (
     <main id="content">
-      <NewsSection/>
+        {/* <h2 class="text-gray-800 text-2xl font-bold p-3 lg:container mx-auto px-3 sm:px-4 xl:px-4">
+          <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span> Rentors' favorite
+        </h2>
+       <NewsSection/> */}
 
       <HouseBlock/>
+{/*   
+      <NewsBlocks/> */}
   
-      <NewsBlocks/>
-  
-      {/* <!-- block news --> */}
+      
       <div class="bg-white py-6">
         <div class="lg:container mx-auto px-3 sm:px-4 xl:px-4">
           <div class="flex flex-row flex-wrap">
             {/* <!-- Left add padding here --> */}
-            <div class="flex-shrink max-w-full w-full  overflow-hidden">
+            <div class="flex-shrink max-w-full w-full overflow-hidden">
               <div class="w-full py-3">
                 <h2 class="text-gray-800 text-2xl font-bold">
-                  <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Asian
+                  <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Advertisement 
                 </h2>
               </div>
               <div class="flex flex-row flex-wrap -mx-3">
                 <div class="flex-shrink max-w-full w-full px-3 pb-5">
-                  <div class="relative hover-img max-h-98 overflow-hidden">
+                  <div class="relative hover-img max-h-80 overflow-hidden ">
                     {/* <!--thumbnail--> */}
                     <a href="#">
-                      <img class="max-w-full w-full mx-auto h-auto" src="/images/img6.jpg" alt="Image description"/>
+                      <img class="max-w-full w-full mx-auto h-96 opacity-75  " src="/images/ads.jpg" alt="Image description"/>
                     </a>
                     <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
                       {/* <!--title--> */}
                       <a href="#">
-                        <h2 class="text-3xl font-bold capitalize text-white mb-3">Amazon Shoppers Are Ditching Designer Belts for This Best-Selling</h2>
+                        <h2 class="text-3xl font-bold capitalize text-white mb-3">Discover the Magic of Egypt , unforgettable Holidays in the Land of Pharaohs! </h2>
                       </a>
-                      <p class="text-gray-100 hidden sm:inline-block">This is a wider card with supporting text below as a natural lead-in to additional content. This very helpfull for generate default content..</p>                                                  
+                      <p class="text-white hidden sm:inline-block">Immerse yourself in the rich tapestry of history, culture, and breathtaking landscapes. Explore the bustling bazaars of Cairo, cruise the majestic Nile River, and relax in luxurious resorts by the Mediterranean and Red Sea. Discover the magic of Egypt, the ultimate destination for an unforgettable holiday.</p>                                                  
                       {/* <!-- author and date --> */}
                       <div class="pt-2">
-                        <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>Europe</div>
+                        <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-amber-600 mr-2"></div>Cairo</div>
                       </div>
                     </div>
+                    
                   </div>
                 </div>
               
