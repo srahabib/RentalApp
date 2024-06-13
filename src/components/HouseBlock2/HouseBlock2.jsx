@@ -6,7 +6,7 @@ const HouseBlock = () => {
 const [houseData, setHouseData] = useState([]);
 const [loading, setLoading] = useState(true);
 const [currentPage, setCurrentPage] = useState(1);
-const [housesPerPage] = useState(12); // Change this value to the number of houses per page
+const [housesPerPage] = useState(9); // Change this value to the number of houses per page
 
 useEffect(() => {
 const fetchData = async () => {
@@ -50,23 +50,28 @@ return <div>Error: Unable to fetch data</div>;
 // Render HouseCard components if data is available
 return (
 <div className="bg-white">
-    <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-    <div className="flex flex-row flex-wrap">
-        <div className="flex-shrink max-w-full w-full lg:w-full overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-            {currentHouses.map((house, index) => (
-            <HouseCard
-                key={index}
-                title={house.title}
-                type={house.type}
-                description={house.description}
-                imageUrl={house.imageUrl}
-                price={house.price}
-            />
-            ))}
+      <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div className="flex flex-row flex-wrap">
+          <div className="flex-shrink max-w-full w-full lg:w-full overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+              {currentHouses.map((house) => (
+                <HouseCard
+                  key={house.id}
+                  id={house.id}
+                  title={house.title}
+                  location={house.location}
+                  description={house.description}
+                  imageUrl={house.imageUrl}
+                  price={house.price}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-        </div>
-    </div>
+
+
+
+    
     {/* Pagination */}
     <div className="flex justify-center mt-4">
         <nav>

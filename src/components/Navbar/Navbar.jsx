@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track if the user is logged in
     const [userPhoto, setUserPhoto] = useState(null); // State to store user's photo
     const [showDropdown, setShowDropdown] = useState(false); // State to manage dropdown visibility
     const [showNav, setShowNav] = useState(false); // State to manage mobile navigation visibility
-    const router = useRouter();
     const [userData, setUserData] = useState(null);
+    const [userRole, setUserRole] = useState(''); // State to track user's role
 
 
     useEffect(() => {
@@ -22,15 +21,16 @@ const Navbar = () => {
     
             // Fetch user data
             fetchUserData();
+
+            fetchUserRole(); // Fetch the user's role
         }
     }, []);
     
-    // Function to fetch user data
-// Function to fetch user data
-// Function to fetch user data
+
 const fetchUserData = async () => {
     try {
         const accessToken = getCookie('accessToken');
+        //console.log(accessToken)
         if (!accessToken) {
             throw new Error('Access token not found');
         }
@@ -56,6 +56,33 @@ const fetchUserData = async () => {
     }
 };
 
+const fetchUserRole = async () => {
+    try {
+        const accessToken = getCookie('accessToken');
+        if (!accessToken) {
+            throw new Error('Access token not found');
+        }
+
+        const response = await fetch('https://rentor-b.onrender.com/auth/user', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${accessToken}`,
+                'Content-Type': 'application/json'
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch user role');
+        }
+
+        const data = await response.json();
+        setUserRole(data.role); // Update user role
+    } catch (error) {
+        console.error('Error fetching user role:', error);
+    }
+};
+
+
 // Function to get the email of the logged-in user
 const getLoggedInUserEmail = (allUserData) => {
     const accessToken = getCookie('accessToken');
@@ -68,9 +95,6 @@ const getLoggedInUserEmail = (allUserData) => {
     const { email } = JSON.parse(decodedPayload);
     return email;
 };
-
-
-    
 
     // Function to get cookie value by name
     const getCookie = (name) => {
@@ -100,6 +124,22 @@ const getLoggedInUserEmail = (allUserData) => {
         setShowNav(!showNav);
     };
 
+    // Function to toggle between 'owner' and 'user' roles
+    const handleRoleSwitch = () => {
+        setUserRole(prevRole => prevRole === 'owner' ? 'user' : 'owner');
+    };
+
+    // Function to handle the link redirection before becoming an owner
+    const handleLinkRedirection = () => {
+        
+        if (userRole !== 'owner') {
+            window.location.href = '/Contact-Details';
+        } else {
+            // Handle switching to owner action
+            handleRoleSwitch();
+        }
+    };
+
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
@@ -123,20 +163,14 @@ const getLoggedInUserEmail = (allUserData) => {
                             <a href="/Contact" className="text-gray-700 dark:text-white">Contact</a>
                         </li>
 
-                        {!isLoggedIn && (
-                        <li>
-                            <a href="/Login" className="text-gray-700 dark:text-white">Login</a>
-                        </li>
-                    )}
-
-                    </ul>
-
-
-                </div>
+                        </ul>
+                    </div>
                 
                 {isLoggedIn && (
-                    <div className='flex flex-row '>
-                    <a href="/Contact-Details" className='text-amber-500 font-bold text-xs mt-2'>Become an Owner</a>
+                     <div className='flex flex-row '>
+                     <a  className='text-amber-500 font-bold text-xs mt-2' onClick={handleRoleSwitch}>
+                         {userRole === 'owner' ? 'Switch to User' : 'Become an Owner'}
+                     </a>
                         <div className="relative ml-4 pr-8">
                             
                             <button onClick={toggleDropdown} type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false">
@@ -155,9 +189,22 @@ const getLoggedInUserEmail = (allUserData) => {
                                          <li>
                                             <a href="/Host" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
                                         </li>
-                                        <li>
-                                            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
-                                        </li>
+                                        {userRole === 'owner' && (
+                                            <li>
+                                                <a href="/Post" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Post Property</a>
+                                            </li>
+                                        )}
+                                        {userRole === 'owner' && (
+                                            <li>
+                                                <a href="/Dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                                            </li>
+                                        )}
+
+                                        {userRole === 'user' && (
+                                            <li>
+                                                <a href="/Dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" style={{ display: 'none' }}>Dashboard</a>
+                                            </li>
+                                        )}
                                         <li>
                                             <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
                                         </li>
@@ -171,6 +218,25 @@ const getLoggedInUserEmail = (allUserData) => {
                         </div>
                         </div>
                     )}
+
+
+                    <div className="flex flex-row items-center space-x-4 ">
+                        {!isLoggedIn && (
+                            
+                        <div>
+                        <a href="/Login" type="button" class="text-white bg-amber-600 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-xs px-5 py-2.5 text-center inline-flex items-center me-2">
+
+                        Login
+                        </a>
+                        {/* <a href="/Register2" type="button" class="text-white bg-amber-600 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-xs px-5 py-2.5 text-center inline-flex items-center">
+                        Signup
+
+                        </a> */}
+
+                        </div>   
+
+                        )}
+                    </div>
 
                 </div>
 

@@ -171,7 +171,23 @@ function Search() {
           <div className="grid items-center flex-1">
             <FormField
               control={form.control}
-              name="adults"
+              name="Type"
+              render={({ field }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel className="text-black">Type</FormLabel>
+                  <FormMessage />
+                  <FormControl>
+                    <Input className="bg-white" placeholder="Type" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+          </div>
+
+          <div className="grid items-center flex-1">
+            <FormField
+              control={form.control}
+              name="Adults"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel className="text-black">Adults</FormLabel>
@@ -187,29 +203,13 @@ function Search() {
           <div className="grid items-center flex-1">
             <FormField
               control={form.control}
-              name="children"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel className="text-black">Children</FormLabel>
-                  <FormMessage />
-                  <FormControl>
-                    <Input className="bg-white" type="number" placeholder="Children" {...field} />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-          </div>
-
-          <div className="grid items-center flex-1">
-            <FormField
-              control={form.control}
               name="rooms"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel className="text-black">Rooms</FormLabel>
                   <FormMessage />
                   <FormControl>
-                    <Input className="bg-white" type="number" placeholder="rooms" {...field} />
+                    <Input className="bg-white" type="number" placeholder="Rooms" {...field} />
                   </FormControl>
                 </FormItem>
               )}

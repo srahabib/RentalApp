@@ -12,7 +12,7 @@ const paymentDone = () => {
                     <p class="text-gray-600 my-2">Thank you for completing your application process we will contact you via email once verification is done </p>
                     <p> Have a great day!  </p>
                     <div class="py-10 text-center">
-                        <a href="#" class="px-12 bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3">
+                        <a href="/" class="px-12 bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3">
                             Go Back 
                        </a>
                     </div>
