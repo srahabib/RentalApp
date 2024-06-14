@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { BedDoubleIcon, CalendarIcon } from "lucide-react";
 import {
@@ -23,26 +22,6 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
 
-export const formSchema = z.object({
-  location: z.string().min(2).max(50),
-  dates: z.object({
-    from: z.date(),
-    to: z.date(),
-  }),
-  adults: z
-    .string()
-    .min(1, {
-      message: "Please select at least 1 adult",
-    })
-    .max(12, { message: "Max 12 adults Occupancy" }),
-  children: z.string().min(0).max(12, {
-    message: "Max 12 children Occupancy",
-  }),
-  rooms: z.string().min(1, {
-    message: "Please select at least 1 room",
-  }),
-});
-
 function Search() {
   const router = useRouter();
 
@@ -53,35 +32,39 @@ function Search() {
         from: null,
         to: null,
       },
-      adults: "1",
-      children: "0",
-      rooms: "1",
+      adults: "",
+      type: "",
+      rooms: "",
     },
   });
 
   function onSubmit(values) {
     console.log(values);
 
-    const checkin_monthday = values.dates.from.getDate().toString();
-    const checkin_month = (values.dates.from.getMonth() + 1).toString();
-    const checkin_year = values.dates.from.getFullYear().toString();
-    const checkout_monthday = values.dates.to.getDate().toString();
-    const checkout_month = (values.dates.to.getMonth() + 1).toString();
-    const checkout_year = values.dates.to.getFullYear().toString();
+    const checkin_monthday = values.dates.from ? values.dates.from.getDate().toString().padStart(2, '0') : null;
+    const checkin_month = values.dates.from ? (values.dates.from.getMonth() + 1).toString().padStart(2, '0') : null;
+    const checkin_year = values.dates.from ? values.dates.from.getFullYear().toString() : null;
+    const checkout_monthday = values.dates.to ? values.dates.to.getDate().toString().padStart(2, '0') : null;
+    const checkout_month = values.dates.to ? (values.dates.to.getMonth() + 1).toString().padStart(2, '0') : null;
+    const checkout_year = values.dates.to ? values.dates.to.getFullYear().toString() : null;
 
-    const checkin = `${checkin_year}-${checkin_month}-${checkin_monthday}`;
-    const checkout = `${checkout_year}-${checkout_month}-${checkout_monthday}`;
+    const checkin = checkin_year && checkin_month && checkin_monthday ? `${checkin_year}-${checkin_month}-${checkin_monthday}` : null;
+    const checkout = checkout_year && checkout_month && checkout_monthday ? `${checkout_year}-${checkout_month}-${checkout_monthday}` : null;
 
-    const url = new URL("https://www.booking.com/searchresults.html");
-    url.searchParams.set("ss", values.location);
-    url.searchParams.set("group_adults", values.adults);
-    url.searchParams.set("group_children", values.children);
-    url.searchParams.set("no_rooms", values.rooms);
-    url.searchParams.set("checkin", checkin);
-    url.searchParams.set("checkout", checkout);
+    const url = new URL("http://localhost:3000/Search/");
+    url.searchParams.set("city", values.location);
+    url.searchParams.set("type", values.type);
+    url.searchParams.set("num_rooms", values.rooms);
+    if (checkin) url.searchParams.set("checkin", checkin);
+    if (checkout) url.searchParams.set("checkout", checkout);
+    url.searchParams.set("adults", values.adults);
 
-    router.push(`/search?url=${url.href}`);
+    router.push(url.toString());
+    
+    
   }
+
+
 
   return (
     <Form {...form}>
@@ -119,7 +102,7 @@ function Search() {
                 <FormLabel className="text-black">Dates</FormLabel>
                 <FormMessage />
 
-                <Popover >
+                <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
@@ -171,7 +154,7 @@ function Search() {
           <div className="grid items-center flex-1">
             <FormField
               control={form.control}
-              name="Type"
+              name="type"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel className="text-black">Type</FormLabel>
@@ -187,7 +170,7 @@ function Search() {
           <div className="grid items-center flex-1">
             <FormField
               control={form.control}
-              name="Adults"
+              name="adults"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel className="text-black">Adults</FormLabel>
@@ -217,7 +200,7 @@ function Search() {
           </div>
 
           <div className="mt-auto">
-            <Button type="submit" className="bg-amber-600 text-base text-white hover:opacity-90 ">
+            <Button type="submit" className="bg-amber-600 text-base text-white hover:opacity-90">
               Search
             </Button>
           </div>

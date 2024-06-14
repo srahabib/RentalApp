@@ -1,6 +1,5 @@
 import React from 'react'
 import NewsSection from '../NewsSection/NewsSection'
-//import Advertisement from '../Advertisement/Advertisement'
 import HouseBlock from '../HouseBlock/HouseBlock'
 import NewsBlocks from '../NewsBlocks/NewsBlocks'
 
