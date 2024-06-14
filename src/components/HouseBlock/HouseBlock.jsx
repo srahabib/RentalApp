@@ -45,7 +45,7 @@ const HouseBlock = () => {
                   key={house.id}
                   id={house.id}
                   title={house.title}
-                  location={house.location}
+                  city={house.city}
                   description={house.description}
                   imageUrl={house.imageUrl}
                   price={house.price}

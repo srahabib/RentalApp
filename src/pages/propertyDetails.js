@@ -70,7 +70,7 @@ dark:after:border-gray-700">
 
     < form className="max-w-sm mx-auto py-5">
     <select id="countries" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-    <option defaultValue>Sale</option>
+    <option defaultValue>Rent</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
     <option value="FR">France</option>
@@ -103,15 +103,18 @@ dark:after:border-gray-700">
 
 
                 <div className="justify-start grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-    <form className="max-w-sm flex justify-start">
-    <select id="countries" className=" block mb-2 text-lg text-gray-400 dark:text-gray-400 bg-white border border-gray-300 rounded-lg w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
-    <option defaultValue>Type</option>
-    <option value="D">Duplex</option>
-    <option value="G">Garden Apartment</option>
-    <option value="T">Triplex</option>
-    <option value="S">Studio</option>
-    </select>
-    </form>
+                <form className="max-w-sm flex justify-start">
+                    <select id="countries" className=" block mb-2 text-lg text-gray-400 dark:text-gray-400 bg-white border border-gray-300 rounded-lg w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option defaultValue>Type</option>
+                    <option value="D">Duplex</option>
+                    <option value="G">Garden Apartment</option>
+                    <option value="T">Triplex</option>
+                    <option value="S">Studio</option>
+                    <option value="S">House</option>
+                    <option value="S">Villa</option>
+
+                    </select>
+                </form>
 
                 </div>
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Transactions() {
   return (
-    <div>
+    <div className='m-10'>
         <div>
     {/* <!-- Table --> */}
     <div class="flex flex-col mt-6">

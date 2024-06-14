@@ -66,12 +66,12 @@ const PropertyDetails = ({ property }) => {
                 <img src="/images/Host.jpg" alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
                 <div className="space-y-4 text-center divide-y dark:divide-gray-300">
                   <div className="my-2 space-y-1">
-                    <h2 className="text-xl font-semibold sm:text-2xl">Leroy Jenkins</h2>
+                    <h2 className="text-xl font-semibold sm:text-2xl">Amira Mohamed </h2>
                     <p className="px-5 text-xs sm:text-base dark:text-gray-600">Mother of two, I love pets</p>
                   </div>
                   <div className="flex justify-center pt-2 space-x-4 align-center">
-                    <Button onClick={handleRentRedirect}> Rent Property </Button>
-                    <Button onClick={handleChatRedirect} >Message
+                    <Button className="bg-amber-600" onClick={handleRentRedirect}> Rent Property </Button>
+                    <Button className="bg-amber-600" onClick={handleChatRedirect} >Message
    
                     <a rel="noopener noreferrer" href="#" aria-label="Email" className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600">
                       <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 fill-current">

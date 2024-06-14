@@ -57,14 +57,14 @@ const Published = () => {
                     </path>
                 </svg>
                 <div class="text-center">
-                    <h3 class="md:text-2xl text-base text-gray-900 font-semibold text-center">Your ad has been published successfully.</h3>
+                    <h3 class="md:text-2xl text-base text-gray-900 font-semibold text-center">Your property has been published successfully.</h3>
                     <p class="text-gray-600 my-2">Thank you .</p>
                     <div class="py-3 text-center ">
         <button onClick={Adding} type="submit" class="bg-amber-600 hover:bg-amber-500 m-8 text-white font-semibold py-3 p-5 rounded text-lg w-auto ">
-        ADDING NEW ONE
+        Add a New One
         </button>
         <button onClick={GoBack} type="submit" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 p-5 rounded text-lg w-auto ">
-        GO BACK 
+        Go Back
         </button>
         
     </div>

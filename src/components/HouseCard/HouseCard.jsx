@@ -2,12 +2,12 @@ import react from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; 
 
-const HouseCard = ({ id, title, location, description, imageUrl, price }) => {
+const HouseCard = ({ id, title, location,city, description, imageUrl, price }) => {
     return (
         <div className="py-6 px-6 sm:p-6 md:py-10 md:px-1 lg:px-0">
         <div className="max-w-4xl mx-auto grid grid-cols-1">
             <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-            <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white lg:text-white lg:pb-7 lg:px-1">Beach House in Alexandria</h1>
+            <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white lg:text-white lg:pb-7 lg:px-1">{title}</h1>
             <p className="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400 lg:text-white lg:px-1">Featured</p>
             </div>
 
@@ -33,7 +33,7 @@ const HouseCard = ({ id, title, location, description, imageUrl, price }) => {
                 <path d="M18 11.034C18 14.897 12 19 12 19s-6-4.103-6-7.966C6 7.655 8.819 5 12 5s6 2.655 6 6.034Z" />
                 <path d="M14 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
                 </svg>
-                Alexandria, Egypt
+                {city}, Egypt
             </dd>
 
             <dt className="sr-only">Price</dt>

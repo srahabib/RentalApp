@@ -5,7 +5,7 @@ import{useRouter} from 'next/router'
 const view = () => {
     const router = useRouter()
     const handleClick=()=>{
-        router.push('/Contact-Details')
+        router.push('/property_contact')
     }
     return (
         <main>
