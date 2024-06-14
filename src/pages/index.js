@@ -6,7 +6,6 @@ import HouseCard from '../components/HouseCard/HouseCard'
 import MAIN from '../components/Main/Main'
 import HeroSection from '../components/HeroSection/HeroSection'
 
-import BookingSearch from './BookingSearch'
  export default function Home() {
   return (
     <>
