@@ -10,19 +10,21 @@ const HouseBlock = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Get the current URL search parameters
-        const searchParams = new URLSearchParams(window.location.search);
+        if (typeof window !== 'undefined') {
+          // Get the current URL search parameters
+          const searchParams = new URLSearchParams(window.location.search);
 
-        // Construct the API URL with the search parameters
-        const apiUrl = `https://rentor-b.onrender.com/property/all?${searchParams.toString()}`;
+          // Construct the API URL with the search parameters
+          const apiUrl = `https://rentor-b.onrender.com/property/all?${searchParams.toString()}`;
 
-        console.log(apiUrl)
+          console.log(apiUrl)
 
-        const res = await fetch(apiUrl);
-        const data = await res.json();
-        console.log(data)
-        setHouseData(data);
-        setLoading(false);
+          const res = await fetch(apiUrl);
+          const data = await res.json();
+          console.log(data)
+          setHouseData(data);
+          setLoading(false);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
         setLoading(false);
@@ -30,7 +32,7 @@ const HouseBlock = () => {
     };
 
     fetchData();
-  }, [window.location.search]); // Refresh when the search URL changes
+  }, [typeof window !== 'undefined' ? window.location.search : null]); // Refresh when the search URL changes
 
   const indexOfLastHouse = currentPage * housesPerPage;
   const indexOfFirstHouse = indexOfLastHouse - housesPerPage;
