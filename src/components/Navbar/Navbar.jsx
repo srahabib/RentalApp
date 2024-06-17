@@ -7,6 +7,8 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false); // State to manage mobile navigation visibility
     const [userData, setUserData] = useState(null);
     const [userRole, setUserRole] = useState(''); // State to track user's role
+    const [owner, setOwner] = useState(''); // State to track user's role
+    const [f, setF] = useState(false); // State to track user's role
 
 
     useEffect(() => {
@@ -77,9 +79,31 @@ const fetchUserRole = async () => {
 
         const data = await response.json();
         setUserRole(data.role); // Update user role
+        setOwner(data.isOwner)
     } catch (error) {
         console.error('Error fetching user role:', error);
     }
+};
+
+const handleSwitchRole = () => {
+    if (owner) {
+        setUserRole('user');
+        setOwner(false);
+    } else {
+        setUserRole('owner');
+        setOwner(true);
+    }
+    setF(!f);
+};
+
+const Switchtuser = () => {
+    setF(true);
+
+};
+
+const Switchtowner = () => {
+    setF(false);
+
 };
 
 
@@ -152,10 +176,20 @@ const getLoggedInUserEmail = (allUserData) => {
  
                     </div>
                 
-                {isLoggedIn && (
-                    <div className='flex flex-row '>
-                    <a href="/Contact-Details" className='text-amber-500 font-bold text-xs mt-2'>
-                        {userRole === 'owner' ? 'Switch to User' : 'Become an Owner'}
+                    {isLoggedIn && (
+                <div className='flex flex-row '>
+                    <a className='text-amber-500 font-bold text-xs mt-2'>
+                        {!owner ? (
+                            <a href="/Contact-Details" className="block text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Become an owner</a>
+                        ) : (
+                            f === true ? (
+                                <a onClick={Switchtowner} className='switch-to-owner'> Switch to Owner </a>
+                            ) : (
+                                <a onClick={Switchtuser} className='switch-to-user'> Switch to User </a> 
+                            )
+                        )}
+
+                        
                     </a>
                         <div className="relative ml-4 pr-8">
                             
@@ -175,18 +209,18 @@ const getLoggedInUserEmail = (allUserData) => {
                                          <li>
                                             <a href="/Host" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
                                         </li>
-                                        {userRole === 'owner' && (
+                                        {f === false && (
                                             <li>
                                                 <a href="/Post" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Post Property</a>
                                             </li>
                                         )}
-                                        {userRole === 'owner' && (
+                                        {f === false && (
                                             <li>
                                                 <a href="/Dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
                                             </li>
                                         )}
 
-                                        {userRole === 'user' && (
+                                        {f === true && (
                                             <li>
                                                 <a href="/Dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" style={{ display: 'none' }}>Dashboard</a>
                                             </li>
