@@ -51,7 +51,7 @@ function Search() {
     const checkin = checkin_year && checkin_month && checkin_monthday ? `${checkin_year}-${checkin_month}-${checkin_monthday}` : null;
     const checkout = checkout_year && checkout_month && checkout_monthday ? `${checkout_year}-${checkout_month}-${checkout_monthday}` : null;
 
-    const url = new URL("http://localhost:3000/Search/");
+    const url = new URL("/Search", window.location.origin);
     url.searchParams.set("city", values.location);
     url.searchParams.set("type", values.type);
     url.searchParams.set("num_rooms", values.rooms);
@@ -60,7 +60,7 @@ function Search() {
     url.searchParams.set("adults", values.adults);
 
     router.push(url.toString());
-    
+
     
   }
 
