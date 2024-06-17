@@ -14,7 +14,7 @@ const GuestSelectedProperties = () => {
                 <div
                     class="flex  flex-row flex-wrap -mx-3 rounded-b-3xl bg-white light:bg-gray-500 space-y-5  items-left pl-10 py-7 ">
                     <img class="h-20 w-20  rounded-full"
-                        src="images/Guest.jpg"
+                        src="images/Host.jpg"
                         alt="User" />
                     <a href="#"> <span
                             class="text-h1 text-2xl font-bold ml-10">John Doe</span></a>

@@ -151,7 +151,7 @@ const PropertyDetails = ({ property }) => {
               Internal & External Features
             </h1>
           </div> */}
-          {/* <Reviews /> */}
+          <Reviews /> 
         </div>
         
         <div className="p-5">

@@ -27,7 +27,7 @@ const Reviews = () => {
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
           </svg>
         </div>
-        <p class="mt-4 text-md text-gray-600">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happines.</p>
+        <p class="mt-4 text-md text-gray-600">The apartment itself was immaculate, with modern furnishings and thoughtful touches that made it feel like a home away from home. The living space was spacious and beautifully decorated, providing a comfortable environment for relaxation after a long day of exploring the city.</p>
         <div class="flex justify-between items-center">
           <div class="mt-4 flex items-center space-x-4 py-6">
             <div class="">
