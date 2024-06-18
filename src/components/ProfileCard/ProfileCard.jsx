@@ -1,102 +1,63 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export default function ProfileCard() {
-const [editMode, setEditMode] = useState(false);
-const [user, setUser] = useState({
-fullName: 'Reham Ahmed',
-mobile: '(20) 123 1234 123',
-email: 'rehamm@mail.com',
-location: 'Egypt',
-bio: "Hi, I'm Reham Ahmed, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).",
-});
+const ProfileCard = () => {
+const [image, setImage] = useState("");
 
-const handleChange = (e) => {
-const { name, value } = e.target;
-setUser((prevUser) => ({ ...prevUser, [name]: value }));
+useEffect(() => {
+// Load image from localStorage when component mounts
+const storedImage = localStorage.getItem('profileImage');
+if (storedImage) {
+    setImage(storedImage);
+}
+}, []);
+
+const handleImageChange = (e) => {
+const file = e.target.files[0];
+if (file) {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+    const result = reader.result;
+    setImage(result);
+    localStorage.setItem('profileImage', result); // Save image to localStorage
+    };
+    reader.readAsDataURL(file);
+}
 };
 
-const toggleEditMode = () => {
-setEditMode(!editMode);
+const handleRemoveImage = () => {
+setImage("");
+localStorage.removeItem('profileImage'); // Remove image from localStorage
 };
 
 return (
-
-<div className="max-w-sm mx-auto bg-white shadow-md rounded-lg p-6">
-    <div className="flex justify-between items-center mb-4">
-    <h1 className="text-xl font-semibold">Profile Information</h1>
-    <button
-        onClick={toggleEditMode}
-        className="text-amber-500 hover:text-amber-700"
-    >
-        {editMode ? 'Save' : 'Edit'}
-    </button>
+<section className="mt-10 p-4">
+    <div className="w-full md:w-1/2 md:mx-auto flex flex-col md:flex-row items-center justify-center text-center">
+    <div className="relative inline-flex object-cover border-4 border-amber-600 rounded-full shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-amber-600/100 bg-indigo-50 h-24 w-24 mb-4 md:mb-0 ml-0 md:mr-5">
+        {image ? (
+        <img className="h-full w-full rounded-full" src={image} alt="Profile" />
+        ) : (
+        <div className="h-full w-full flex items-center justify-center text-gray-400">
+            No Image
+        </div>
+        )}
+        <input
+        type="file"
+        accept="image/*"
+        className="absolute inset-0 opacity-0 cursor-pointer"
+        onChange={handleImageChange}
+        />
     </div>
-    {editMode ? (
-    <>
-        <textarea
-        name="bio"
-        value={user.bio}
-        onChange={handleChange}
-        className="w-full p-2 mb-4 border rounded-md"
-        />
-        <div className="mb-4">
-        <label className="block text-gray-700">Full Name:</label>
-        <input
-            type="text"
-            name="fullName"
-            value={user.fullName}
-            onChange={handleChange}
-            className="w-full p-2 border rounded-md"
-        />
-        </div>
-        <div className="mb-4">
-        <label className="block text-gray-700">Mobile:</label>
-        <input
-            type="text"
-            name="mobile"
-            value={user.mobile}
-            onChange={handleChange}
-            className="w-full p-2 border rounded-md"
-        />
-        </div>
-        <div className="mb-4">
-        <label className="block text-gray-700">Email:</label>
-        <input
-            type="email"
-            name="email"
-            value={user.email}
-            onChange={handleChange}
-            className="w-full p-2 border rounded-md"
-        />
-        </div>
-        <div className="mb-4">
-        <label className="block text-gray-700">Location:</label>
-        <input
-            type="text"
-            name="location"
-            value={user.location}
-            onChange={handleChange}
-            className="w-full p-2 border rounded-md"
-        />
-        </div>
-    </>
-    ) : (
-    <>
-        <p className="mb-4 text-gray-700">{user.bio}</p>
-        <div className="mb-4">
-        <strong>Full Name:</strong> {user.fullName}
-        </div>
-        <div className="mb-4">
-        <strong>Mobile:</strong> {user.mobile}
-        </div>
-        <div className="mb-4">
-        <strong>Email:</strong> {user.email}
-        </div>
-        <div className="mb-4">
-        <strong>Location:</strong> {user.location}
-        </div>
-    </>
+    {image && (
+        <button
+        className="mt-4 md:mt-0 md:ml-4 px-4 py-2  text-amber-600 rounded"
+        onClick={handleRemoveImage}
+        >
+        Remove
+        </button>
     )}
-</div>
+    </div>
+</section>
 );
-}
+};
+
+export default ProfileCard;
