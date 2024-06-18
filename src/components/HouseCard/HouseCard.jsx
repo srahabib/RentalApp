@@ -8,7 +8,7 @@ const HouseCard = ({ id, title, location,city, description, imageUrl, price }) =
         <div className="max-w-4xl mx-auto grid grid-cols-1">
             <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
             <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white lg:text-white lg:pb-7 lg:px-1">{title}</h1>
-            <p className="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400 lg:text-white lg:px-1">Featured</p>
+            {/* <p className="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400 lg:text-white lg:px-1">Featured</p> */}
             </div>
 
             <div className="grid gap-4 col-start-1 col-end-3 row-start-1 lg:mb-6 sm:grid-cols-4">

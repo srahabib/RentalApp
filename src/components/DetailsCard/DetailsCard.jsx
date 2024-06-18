@@ -8,7 +8,11 @@ const DetailsCard = () => {
         <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
               <div class="flex flex-row flex-wrap">
               <div className="py-6 px-6 sm:p-6 md:py-10 md:px-1 lg:px-0">
+              <div className="grid gap-4 col-start-1 col-end-3 row-start-1 lg:mb-6 sm:grid-cols-4">
+        
+                <Image src={"/images/" + "img6.jpg"} alt="" className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-full lg:col-span-full" loading="lazy" width={500} height={300}/>
 
+                </div>
 
                 <div className="max-w-4xl mx-auto grid grid-cols-1">
 
