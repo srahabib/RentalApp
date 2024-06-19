@@ -46,7 +46,7 @@ const HouseCard = ({ id, title, location, city, description, imageUrl, price }) 
                 <div className="mt-4 col-start-1 row-start-3 self-center sm:mt-0 sm:col-start-2 sm:row-start-2 sm:row-span-2 lg:mt-6 lg:col-start-1 lg:row-start-3 lg:row-end-4">
                     {/* Use Link from next/link for navigation */}
                     <Link href={`/property/${id}`}>
-                        <span className="bg-green2 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-blackhover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black">Check availability</span>
+                        <span className="bg-green2 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg hover:bg-grey1 focus:text-blackhover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black">Check availability</span>
                     </Link>
                 </div>
 

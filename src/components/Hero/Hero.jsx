@@ -1,10 +1,11 @@
 import react from 'react'
 
 
-
 const Hero = () => {
     return (
     <section class="mb-40">
+
+        
     
         <div class="flex w-full flex-wrap items-center justify-between px-6">
         

@@ -56,7 +56,7 @@ const Membership = () => {
                     <script src="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.bundle.js"></script>
 
 
-                    <button type="button" id="theme-toggle" class="px-5 text-center justify-items-end py-2 rounded bg-green2 text-white bg-green2 text-white hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black transition-colors">
+                    <button type="button" id="theme-toggle" class="px-5 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black transition-colors">
                         Save
                     </button>
                 </div>

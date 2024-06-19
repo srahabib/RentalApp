@@ -141,7 +141,7 @@ const ContactDetails = () => {
                             </div>
 
                             <div className="mt-3">
-                                <button type="submit" className="text-white px-3 py-2 rounded bg-green2 text-white hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black">Submit</button>
+                                <button type="submit" className="px-3 py-2 rounded bg-green2 text-white hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black">Submit</button>
                             </div>
                         </form>
                     </div>

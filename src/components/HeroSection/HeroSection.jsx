@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Search from "../Search/Search";
-import Hero from '@/components/Hero/Hero';
+import KHero from '../Hero/KHero'
 
 const trending_data = [
   {
@@ -50,11 +50,12 @@ const HeroSection = () => {
 
   return (
     <main className="bg-[#fbfbfa] pb-10 mb-10">
-      <section className="max-w-7xl mx-auto p-6">
-        <h2 className="font-bold text-5xl text-black pt-10">Find your Next Stay</h2>
+      <KHero/>
+      <section className="max-w-7xl mx-auto p-6 mt-10">
+        {/* <h2 className="font-bold text-5xl text-black pt-10">Find your Next Stay</h2>
         <h3 className="text-black py-5 text-xl">
           Search low prices on hotels, homes and much more...
-        </h3>
+        </h3> */}
       </section>
 
       <section className="m-4 mt-0 -mb-14 px-2 lg:px-4">

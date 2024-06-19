@@ -244,7 +244,7 @@ const Register = () => {
         <button
           disabled={isSubmitting}
           type="submit"
-          className="w-full bg-green2 text-white p-2 rounded focus:outline-none focus:shadow-outline-blue hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black"
+          className="w-full bg-green2 text-white p-2 rounded focus:shadow-outline-blue hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black"
         >
           Sign Up
         </button>

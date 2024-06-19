@@ -34,12 +34,9 @@ const Published = () => {
               <button
                 onClick={Adding}
                 type="submit"
-                class="bg-amber-600 hover:bg-amber-500 m-8 text-white font-semibold py-3 p-5 rounded text-lg w-auto "
+                class="bg-green2 hover:bg-green1 m-8 text-whitem-8 text-white font-semibold py-3 p-5 rounded text-lg w-auto "
               >
                 ADDING NEW ONE
-                class="bg-green2 hover:bg-green1 m-8 text-white font-semibold py-3 p-5 rounded text-lg w-auto "
-              >
-                Adding New One
               </button>
               <button
                 onClick={GoBack}

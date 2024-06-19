@@ -70,8 +70,8 @@ const PropertyDetails = ({ property }) => {
                     <p className="px-5 text-xs sm:text-base dark:text-gray-600">Mother of two, I love pets</p>
                   </div>
                   <div className="flex justify-center pt-2 space-x-4 align-center">
-                    <Button className="mt-2 bg-green2 bg-green2 text-white font-bold hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black" onClick={handleRentRedirect}> Rent Property </Button>
-                    <Button className="mt-2 bg-green2 bg-green2 text-white font-bold hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black" onClick={handleChatRedirect} >Message
+                    <Button className="mt-2 bg-green2 text-white font-bold hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black" onClick={handleRentRedirect}> Rent Property </Button>
+                    <Button className="mt-2 bg-green2 text-white font-bold hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black" onClick={handleChatRedirect} >Message
 
                       <a rel="noopener noreferrer" href="#" aria-label="Email" className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600">
                         <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 fill-current">

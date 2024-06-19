@@ -4,6 +4,7 @@ import HouseBlock from '../HouseBlock/HouseBlock'
 import NewsBlocks from '../NewsBlocks/NewsBlocks'
 
 
+
 const Main = () => {
   return (
     <main id="content">
@@ -11,6 +12,8 @@ const Main = () => {
           <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span> Rentors' favorite
         </h2>
        <NewsSection/> */}
+
+       
 
       <HouseBlock />
       {/*   

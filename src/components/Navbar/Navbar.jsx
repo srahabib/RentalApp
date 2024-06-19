@@ -7,6 +7,9 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false); // State to manage mobile navigation visibility
     const [userData, setUserData] = useState(null);
     const [userRole, setUserRole] = useState(''); // State to track user's role
+    const [owner, setOwner] = useState(''); // State to track user's role
+    const [f, setF] = useState(false); // State to track user's role
+
 
 
     useEffect(() => {
@@ -156,17 +159,17 @@ const getLoggedInUserEmail = (allUserData) => {
                 <div className="hidden md:flex items-center space-x-4 flex-grow">
                     <ul className="flex flex-row items-center space-x-4 ">
                         <li>
-                            <a href="/" className="text-gray-700 dark:text-white">Home</a>
+                            <a href="/" className="text-white hover:text-grey1">Home</a>
                         </li>
                        
                         <li>
-                            <a href="/Search" className="text-gray-700 dark:text-white">Apartments</a>
+                            <a href="/Search" className="text-white hover:text-grey1">Apartments</a>
                         </li>
                         <li>
-                            <a href="/About" className="text-gray-700 dark:text-white">About</a>
+                            <a href="/About" className="text-white hover:text-grey1">About</a>
                         </li>
                         <li>
-                            <a href="/Contact" className="text-gray-700 dark:text-white">Contact</a>
+                            <a href="/Contact" className="text-white hover:text-grey1">Contact</a>
                         </li>
 
                         </ul>
@@ -176,7 +179,7 @@ const getLoggedInUserEmail = (allUserData) => {
                 
                     {isLoggedIn && (
                 <div className='flex flex-row '>
-                    <a className='text-amber-500 font-bold text-xs mt-2'>
+                    <a className='text-bej1 font-bold text-xs mt-2 hover:text-grey1'>
                         {!owner ? (
                             <a href="/Contact-Details" className="block text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Become an owner</a>
                         ) : (
@@ -209,7 +212,7 @@ const getLoggedInUserEmail = (allUserData) => {
                                         </li>
                                         {f === false && (
                                             <li>
-                                                <a href="/Post" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Post Property</a>
+                                                <a href="/propertyDetails" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Post Property</a>
                                             </li>
                                         )}
                                         {f === false && (
@@ -242,7 +245,7 @@ const getLoggedInUserEmail = (allUserData) => {
                         {!isLoggedIn && (
                             
                         <div>
-                        <a href="/Login" type="button" class="text-white bg-amber-600 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-lg text-xs px-5 py-2.5 text-center inline-flex items-center me-2">
+                        <a href="/Login" type="button" class="text-black bg-white hover:bg-grey1 hover:text-white focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-white focus:text-black font-medium rounded-lg text-xs px-5 py-2.5 text-center inline-flex items-center me-2">
 
                         Login
                         </a>
@@ -274,16 +277,16 @@ const getLoggedInUserEmail = (allUserData) => {
                 
                 <ul className="flex flex-col items-center mt-4 space-y-4 ">
                     <li>
-                        <a href="/" className="text-gray-700 dark:text-white">Home</a>
+                        <a href="/" className="text-white hover:text-grey1">Home</a>
                     </li>
                     <li>
-                        <a href="/Search" className="text-gray-700 dark:text-white">Apartments</a>
+                        <a href="/Search" className="text-white hover:text-grey1">Apartments</a>
                     </li>
                     <li>
-                        <a href="#" className="text-gray-700 dark:text-white">About</a>
+                        <a href="#" className="text-white hover:text-grey1">About</a>
                     </li>
                     <li>
-                        <a href="/Contact" className="text-gray-700 dark:text-white">Contact</a>
+                        <a href="/Contact" className="text-white hover:text-grey1">Contact</a>
                     </li>
 
                 </ul>
