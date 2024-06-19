@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Search from "../Search/Search";
+import Hero from '@/components/Hero/Hero';
 
 const trending_data = [
   {

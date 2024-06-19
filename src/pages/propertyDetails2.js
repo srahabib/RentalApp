@@ -78,7 +78,7 @@ const PropertyDetails = () => {
     e.preventDefault();
 
     router.push({
-      pathname: '/view',
+      pathname: '/view2',
       query: {
         ...data,
         lon: data.location.longitude,
@@ -111,7 +111,7 @@ const PropertyDetails = () => {
         <form onSubmit={(e) => submit(e)}>
           <div className="mx-auto">
             <div className="general_info bg-white shadow-lg  px-6 pb-12 pt-6 mb-4 rounded-lg ">
-              <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-amber-600 w-40">
+              <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-green2 w-40">
                 General Information
               </h1>
               <div className=" grid md:grid-cols-3 gap-4 w-full py-5">
@@ -161,7 +161,7 @@ const PropertyDetails = () => {
               </div>
             </div>
             <div className="bg-white border-2 rounded-md shadow-md p-6">
-              <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-amber-600 w-40">
+              <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-green2 w-40">
                 Detailed Information
               </h1>
               <div className="mb-4 grid grid-cols-4 gap-4">
@@ -285,7 +285,7 @@ const PropertyDetails = () => {
               ></input>
             ))}
             <button
-              className="px-5 mt-2 text-center justify-items-end py-2 rounded bg-amber-600 text-white hover:bg-amber-800 focus:outline-none transition-colors"
+              className="px-5 mt-2 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-green1 focus:outline-none transition-colors"
               onClick={handlePhotosClick}
             >
               Add Url
@@ -294,7 +294,7 @@ const PropertyDetails = () => {
                 <button
                   onClick={() => handleAdd()}
                   type="button"
-                  className="px-5 mt-2 text-center justify-items-end py-2 rounded bg-amber-600 text-white hover:bg-amber-800 focus:outline-none transition-colors"
+                  className="px-5 mt-2 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-green1 focus:outline-none transition-colors"
                 >
                   Add
                 </button>
@@ -308,7 +308,7 @@ const PropertyDetails = () => {
                       />
                       <button
                         onClick={() => handleDelete(i)}
-                        className="border text-lg w-8 h-8 ml-1 bg-amber-600 text-white rounded"
+                        className="border text-lg w-8 h-8 ml-1 bg-green2 text-white rounded"
                       >
                         X
                       </button>
@@ -319,7 +319,7 @@ const PropertyDetails = () => {
             </div>
             <div className="mx-auto">
               <div className="bg-white border-2 rounded-md shadow-md p-6 my-4">
-                <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-amber-600 w-40">
+                <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-green2 w-40">
                   Contact
                 </h1>
                 <input
@@ -342,7 +342,7 @@ const PropertyDetails = () => {
                   // onClick={handleClick}
                   type="submit"
                   id="next"
-                  class="px-5 mt-2 text-center justify-items-end py-2 rounded bg-amber-600 text-white hover:bg-amber-800 focus:outline-none transition-colors"
+                  class="px-5 mt-2 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-green1 focus:outline-none transition-colors"
                 >
                   Next
                 </button>

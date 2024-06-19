@@ -7,7 +7,7 @@ const chat = () => {
               <div class="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
                 <div class="flex flex-row items-center justify-center h-12 w-full">
                   <div
-                    class="flex items-center justify-center rounded-2xl text-amber-700 bg-amber-100 h-10 w-10"
+                    class="flex items-center justify-center rounded-2xl text-green1 bg-bej1 h-10 w-10"
                   >
                     <svg
                       class="w-6 h-6"
@@ -40,7 +40,7 @@ const chat = () => {
                   <div class="text-xs text-gray-500">Lead UI/UX Designer | Father of 3</div>
                   <div class="flex flex-row items-center mt-3">
                     <div
-                      class="flex flex-col justify-center h-4 w-8 bg-amber-500 rounded-full"
+                      class="flex flex-col justify-center h-4 w-8 bg-green2 rounded-full"
                     >
                       <div class="h-3 w-3 bg-white rounded-full self-end mr-1"></div>
                     </div>
@@ -143,7 +143,7 @@ const chat = () => {
                         <div class="col-start-1 col-end-8 p-3 rounded-lg">
                           <div class="flex flex-row items-center">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -157,7 +157,7 @@ const chat = () => {
                         <div class="col-start-1 col-end-8 p-3 rounded-lg">
                           <div class="flex flex-row items-center">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -175,7 +175,7 @@ const chat = () => {
                         <div class="col-start-6 col-end-13 p-3 rounded-lg">
                           <div class="flex items-center justify-start flex-row-reverse">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -189,7 +189,7 @@ const chat = () => {
                         <div class="col-start-6 col-end-13 p-3 rounded-lg">
                           <div class="flex items-center justify-start flex-row-reverse">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -205,7 +205,7 @@ const chat = () => {
                         <div class="col-start-1 col-end-8 p-3 rounded-lg">
                           <div class="flex flex-row items-center">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -219,7 +219,7 @@ const chat = () => {
                         <div class="col-start-6 col-end-13 p-3 rounded-lg">
                           <div class="flex items-center justify-start flex-row-reverse">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -240,7 +240,7 @@ const chat = () => {
                         <div class="col-start-1 col-end-8 p-3 rounded-lg">
                           <div class="flex flex-row items-center">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -257,7 +257,7 @@ const chat = () => {
                         <div class="col-start-1 col-end-8 p-3 rounded-lg">
                           <div class="flex flex-row items-center">
                             <div
-                              class="flex items-center justify-center h-10 w-10 rounded-full bg-amber-500 flex-shrink-0"
+                              class="flex items-center justify-center h-10 w-10 rounded-full bg-grey1 flex-shrink-0"
                             >
                               A
                             </div>
@@ -266,7 +266,7 @@ const chat = () => {
                             >
                               <div class="flex flex-row items-center">
                                 <button
-                                  class="flex items-center justify-center bg-amber-600 hover:bg-amber-800 rounded-full h-8 w-10"
+                                  class="flex items-center justify-center bg-green1 hover:bg-green2 rounded-full h-8 w-10"
                                 >
                                   <svg
                                     class="w-6 h-6 text-white"
@@ -356,7 +356,7 @@ const chat = () => {
                       <div class="relative w-full">
                         <input
                           type="text"
-                          class="flex w-full border rounded-xl focus:outline-none focus:border-amber-300 pl-4 h-10"
+                          class="flex w-full border rounded-xl focus:outline-none focus:border-green2 pl-4 h-10"
                         />
                         <button
                           class="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-gray-400 hover:text-gray-600"
@@ -380,7 +380,7 @@ const chat = () => {
                     </div>
                     <div class="ml-4">
                       <button
-                        class="flex items-center justify-center bg-amber-500 hover:bg-amber-600 rounded-xl text-white px-4 py-1 flex-shrink-0"
+                        class="flex items-center justify-center bg-green1 hover:bg-green2 rounded-xl text-white px-4 py-1 flex-shrink-0"
                       >
                         <span>Send</span>
                         <span class="ml-2">

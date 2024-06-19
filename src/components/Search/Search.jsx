@@ -200,7 +200,7 @@ function Search() {
           </div>
 
           <div className="mt-auto">
-            <Button type="submit" className="bg-amber-600 text-base text-white hover:opacity-90">
+            <Button type="submit" className="bg-green2 text-base text-white hover:opacity-90 hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black">
               Search
             </Button>
           </div>

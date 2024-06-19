@@ -43,7 +43,7 @@ const EditableCurrency = () => {
           </select>
 
           <div className="flex flex-col sm:flex-row">
-            <button onClick={handleSaveClick} className="bg-amber-600 ml-3 text-lg text-white px-3 py-1 rounded mb-2 sm:mb-0 sm:mr-2">
+            <button onClick={handleSaveClick} className="bg-grey1 ml-3 text-lg text-white px-3 py-1 rounded mb-2 sm:mb-0 sm:mr-2">
               Save
             </button>
             <button onClick={handleCancelClick} className="text-lg text-gray-600">
@@ -54,7 +54,7 @@ const EditableCurrency = () => {
       ) : (
         <>
           <p className="text-md text-gray-700 ml-0">{currency}</p>
-          <button onClick={handleEditClick} className="text-amber-600 sm:ml-3 text-lg">
+          <button onClick={handleEditClick} className="text-grey1 sm:ml-3 text-lg">
             Edit
           </button>
         </>

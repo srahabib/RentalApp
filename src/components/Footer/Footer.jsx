@@ -4,7 +4,7 @@ import Logo from '../Navbar/Logo'
 const Footer = () => {
 
     return (
-<footer className="bg-white">
+<footer className="bg-green1">
   <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-4">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
@@ -12,7 +12,7 @@ const Footer = () => {
         <Logo />
         </div>
 
-        <p className="mt-4 max-w-xs text-gray-500">
+        <p className="mt-4 max-w-xs text-white">
         At Rentor, we believe that finding the perfect place to call home should be effortless and enjoyable. Our mission is to simplify the rental process by harnessing the power of artificial intelligence.
         </p>
 
@@ -22,7 +22,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-white transition hover:opacity-75"
             >
               <span className="sr-only">Facebook</span>
 
@@ -41,7 +41,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-white transition hover:opacity-75"
             >
               <span className="sr-only">Instagram</span>
 
@@ -60,7 +60,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-white transition hover:opacity-75"
             >
               <span className="sr-only">Twitter</span>
 
@@ -77,7 +77,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-white transition hover:opacity-75"
             >
               <span className="sr-only">GitHub</span>
 
@@ -96,7 +96,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-white transition hover:opacity-75"
             >
               <span className="sr-only">Dribbble</span>
 
@@ -114,87 +114,87 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
         <div>
-          <p className="font-medium text-gray-900">Services</p>
+          <p className="font-medium text-white">Services</p>
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Renting </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Renting </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Hosting </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Hosting </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Accounts Review </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Support </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Support </a>
             </li>
 
           </ul>
         </div>
         <div>
-          <p className="font-medium text-gray-900">Company</p>
+          <p className="font-medium text-white">Company</p>
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> About </a>
+              <a href="#" className="text-white transition hover:opacity-75"> About </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Meet the Team </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Meet the Team </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Accounts Review </a>
             </li>
           </ul>
         </div>
         <div>
-          <p className="font-medium text-gray-900">Helpful Links</p>
+          <p className="font-medium text-white">Helpful Links</p>
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Contact </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Contact </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> FAQs </a>
+              <a href="#" className="text-white transition hover:opacity-75"> FAQs </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Chat </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Chat </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <p className="font-medium text-gray-900">Legal</p>
+          <p className="font-medium text-white">Legal</p>
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Accessibility </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Accessibility </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Returns Policy </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Returns Policy </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Refund Policy </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Refund Policy </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-700 transition hover:opacity-75"> Hiring Statistics </a>
+              <a href="#" className="text-white transition hover:opacity-75"> Hiring Statistics </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
 
-    <p className="text-xs text-gray-500">&copy; 2024. Rentor. All rights reserved.</p>
+    <p className="text-xs text-white">&copy; 2024. Rentor. All rights reserved.</p>
   </div>
 </footer>
 

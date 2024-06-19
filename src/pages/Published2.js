@@ -5,7 +5,7 @@ import Bar3 from "../components/FormHero/Bar3";
 const Published = () => {
   const router = useRouter();
   const Adding = () => {
-    router.push("/propertyDetails");
+    router.push("/propertyDetails2");
   };
   const GoBack = () => {
     router.push("/");
@@ -18,7 +18,7 @@ const Published = () => {
         <div class="bg-white p-6  md:mx-auto">
           <svg
             viewBox="0 0 24 24"
-            class="text-amber-900 w-16 h-16 mx-auto my-6"
+            class="text-green1 w-16 h-16 mx-auto my-6"
           >
             <path
               fill="currentColor"
@@ -37,13 +37,16 @@ const Published = () => {
                 class="bg-amber-600 hover:bg-amber-500 m-8 text-white font-semibold py-3 p-5 rounded text-lg w-auto "
               >
                 ADDING NEW ONE
+                class="bg-green2 hover:bg-green1 m-8 text-white font-semibold py-3 p-5 rounded text-lg w-auto "
+              >
+                Adding New One
               </button>
               <button
                 onClick={GoBack}
                 type="submit"
-                class="bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 p-5 rounded text-lg w-auto "
+                class="bg-green2 hover:bg-green1 text-white font-semibold py-3 p-5 rounded text-lg w-auto "
               >
-                GO BACK
+                Go Back
               </button>
             </div>
           </div>

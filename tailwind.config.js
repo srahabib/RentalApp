@@ -3,10 +3,12 @@ module.exports = {
   darkMode: ["class"],
   content: [
     "./node_modules/flowbite-react/lib/**/*.js",
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js",
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
+
   ],
   prefix: "",
   theme: {
@@ -19,6 +21,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        'green1': '#12372A',
+        'green2': '#436850',
+        'grey1': '#ADBC9F',
+        'bej1': '#FBFADA',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

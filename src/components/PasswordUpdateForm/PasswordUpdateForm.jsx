@@ -32,11 +32,11 @@ const PasswordUpdateForm = () => {
             <div className="flex items-center justify-between w-full sm:w-auto">
                 <p className="text-md mt-1 flex-1">Password</p>
                 {!showForm && (
-                <button
-                onClick={() => setShowForm(true)}
-                className="text-amber-600 text-lg ml-20">
-                Edit
-            </button>
+                    <button
+                        onClick={() => setShowForm(true)}
+                        className="text-grey1 text-lg ml-20">
+                        Edit
+                    </button>
                 )}
             </div>
 
@@ -75,7 +75,7 @@ const PasswordUpdateForm = () => {
                     <div className="flex mt-4">
                         <button
                             type="submit"
-                            className="bg-amber-600 ml-3 text-md text-white px-3 py-1 rounded mr-2">
+                            className="bg-grey1 ml-3 text-md text-white px-3 py-1 rounded mr-2">
                             Update Password
                         </button>
                         <button

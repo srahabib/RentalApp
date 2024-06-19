@@ -52,7 +52,7 @@ return (
         required
         />
         <div className="flex">
-        <button onClick={handleSaveClick} className="bg-amber-600 text-lg text-white px-3 py-1 rounded mr-2">
+        <button onClick={handleSaveClick} className="bg-grey1 text-lg text-white px-3 py-1 rounded mr-2">
             Save
         </button>
         <button onClick={handleCancelClick} className="text-lg text-gray-600">
@@ -64,7 +64,7 @@ return (
     ) : (
     <div className="flex flex-col sm:flex-row items-center w-full sm:w-auto">
         <p className="text-md text-gray-700 mb-2 sm:mb-0 sm:mr-4">{phoneNumber}</p>
-        <button onClick={handleEditClick} className="text-amber-600 text-lg">
+        <button onClick={handleEditClick} className="text-grey1 text-lg">
         Edit
         </button>
     </div>

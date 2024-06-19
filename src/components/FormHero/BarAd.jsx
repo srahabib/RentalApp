@@ -6,16 +6,16 @@ const Bar1 = () => {
       <ol class="mx-56 mb-10 pt-10 flex content-center items-center ">
         <li
           class="flex w-full items-center text-black dark:text-orange-500 after:content-[''] after:w-full after:h-1 after:border-b
-                after:border-amber-100 after:border-4 after:inline-block dark:after:border-amber-600"
+                after:border-grey1 after:border-4 after:inline-block dark:after:border-green2"
         >
-          <span class="flex items-center justify-center w-10 h-10 bg-amber-600 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
+          <span class="flex items-center justify-center w-10 h-10 bg-green2 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6 bg-amber-600 "
+              class="w-6 h-6 bg-green2 "
             >
               <path
                 stroke-linecap="round"
@@ -25,7 +25,7 @@ const Bar1 = () => {
             </svg>
           </span>
         </li>
-        <li class="flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-amber-700">
+        <li class="flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-green1">
           <span class="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"

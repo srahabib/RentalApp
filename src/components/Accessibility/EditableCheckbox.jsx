@@ -18,12 +18,12 @@ const EditableCheckbox = ({ label, initialValue }) => {
   return (
     <div className="flex flex-col sm:flex-row items-center">
       <p className="text-md sm:mr-4">Accessibility Requirements</p>
-      <p className="text-md sm:mr-4 text-gray-700">only show me accessible properties</p>
+      <p className="text-md sm:mr-4 text-gray-700">Only show me accessible properties</p>
 
       {!isEditing ? (
         <div className="flex items-center mt-2 sm:mr-60">
           <span>{label}</span>
-          <button onClick={() => setIsEditing(true)} className="text-amber-600 text-lg sm:ml-3">
+          <button onClick={() => setIsEditing(true)} className="text-grey1 text-lg sm:ml-3">
             Edit
           </button>
         </div>
@@ -39,7 +39,7 @@ const EditableCheckbox = ({ label, initialValue }) => {
             <span>{label}</span>
           </div>
           <div className="flex flex-col sm:flex-row  ">
-            <button onClick={handleSave} className="bg-amber-600 mt-3 mb-3 text-lg text-white px-3 py-1 rounded mr-2">
+            <button onClick={handleSave} className="bg-grey1 mt-3 mb-3 text-lg text-white px-3 py-1 rounded mr-2">
               Save
             </button>
             <button onClick={handleCancel} className="text-lg  text-gray-600">

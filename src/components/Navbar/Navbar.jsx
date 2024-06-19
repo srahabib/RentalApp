@@ -7,8 +7,6 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false); // State to manage mobile navigation visibility
     const [userData, setUserData] = useState(null);
     const [userRole, setUserRole] = useState(''); // State to track user's role
-    const [owner, setOwner] = useState(''); // State to track user's role
-    const [f, setF] = useState(false); // State to track user's role
 
 
     useEffect(() => {
@@ -149,10 +147,10 @@ const getLoggedInUserEmail = (allUserData) => {
     };
 
     return (
-        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <nav className="bg-green1 border-gray-200 dark:bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="images/rentorLogo4.svg" className="h-8 pr-5" alt="Flowbite Logo" />
+                    <img src="images/RentorLogo2 White.png" className="h-8 pr-5" alt="Flowbite Logo" />
                 </a>
 
                 <div className="hidden md:flex items-center space-x-4 flex-grow">

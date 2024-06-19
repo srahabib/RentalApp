@@ -107,7 +107,7 @@ const view = () => {
       <div className="container mx-auto mb-6">
         <div className="mx-auto">
           <div className="general_info bg-white shadow-lg px-6 pb-5 pt-6 mb-4 rounded-lg">
-            <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-amber-600 w-40">
+            <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-green2 w-40">
               General Information
             </h1>
             <dl>
@@ -138,7 +138,7 @@ const view = () => {
             </dl>
           </div>
           <div className="bg-white border-2 rounded-md shadow-md px-6 py-5 mb-4">
-            <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-amber-600 w-40">
+            <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-green2 w-40">
               Detailed Information
             </h1>
             <div className="grid md:grid-cols-2 gap-4 w-full">
@@ -213,7 +213,7 @@ const view = () => {
             </div> */}
           </div>
           <div className="general_info bg-white shadow-lg px-6 pb-5 pt-6 mb-6 rounded-lg">
-            <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-amber-600 w-40">
+            <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-green2 w-40">
               Contact Information
             </h1>
             <dl>
@@ -235,8 +235,7 @@ const view = () => {
             <button
               onClick={submit}
               id="next"
-              class="px-5 mt-2 text-center justify-items-end py-2 rounded bg-amber-600 text-white hover:bg-amber-800 focus:outline-none transition-colors"
-            >
+              class="px-5 mt-2 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-green1 focus:outline-none transition-colors">
               Next
             </button>
           </div>

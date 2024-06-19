@@ -1,6 +1,6 @@
 const paymentDone = () => {
     return (
-        <div class="bg-gray-100">
+        <div class="bg-gray-100 my-20">
               <div class="bg-white p-6  md:mx-auto">
                 <svg viewBox="0 0 24 24" class="text-green-600 w-16 h-16 mx-auto my-6">
                     <path fill="currentColor"
@@ -12,7 +12,7 @@ const paymentDone = () => {
                     <p class="text-gray-600 my-2">Thank you for completing your application process we will contact you via email once verification is done </p>
                     <p> Have a great day!  </p>
                     <div class="py-10 text-center">
-                        <a href="/" class="px-12 bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3">
+                        <a href="/" class="px-12 bg-green2 text-white hover:bg-grey1 focus:ring-4 focus:outline-none focus:ring-grey1 focus:bg-bej1 focus:text-black font-semibold rounded py-3">
                             Go Back 
                        </a>
                     </div>

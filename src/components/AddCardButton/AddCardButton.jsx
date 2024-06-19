@@ -141,7 +141,7 @@ const AddCardButton = () => {
                 ) : (
                     <button
                         onClick={handleAddCardClick}
-                        className="bg-amber-600 text-white px-4 py-2 rounded"
+                        className="bg-green2 text-white px-4 py-2 rounded bg-green2 text-white hover:bg-grey1 focus:ring-grey1 focus:bg-bej1 focus:text-black focus:ring-2 focus:outline-none"
                     >
                         Add Card
                     </button>

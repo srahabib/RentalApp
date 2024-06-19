@@ -46,7 +46,7 @@ return (
         ))}
         </select>
         <div className="flex flex-col sm:flex-row">
-        <button onClick={handleSaveClick} className="bg-amber-600 text-lg text-white px-3 py-1 rounded mb-2 sm:mb-0 sm:mr-2">
+        <button onClick={handleSaveClick} className="bg-grey1 text-lg text-white px-3 py-1 rounded mb-2 sm:mb-0 sm:mr-2">
             Save
         </button>
         <button onClick={handleCancelClick} className="text-lg text-gray-600">
@@ -60,7 +60,7 @@ return (
         {languages.find((lang) => lang.code === language)?.flag}{' '}
         {languages.find((lang) => lang.code === language)?.name}
         </p>
-        <button onClick={handleEditClick} className="text-amber-600 text-lg sm:ml-4">
+        <button onClick={handleEditClick} className="text-grey1 text-lg sm:ml-4">
         Edit
         </button>
     </>
