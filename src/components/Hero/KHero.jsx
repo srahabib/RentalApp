@@ -48,7 +48,7 @@ const Hero = () => {
             </div>
             <div className="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6">
                 <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Find your <span className='border-b-4 border-b-green1'>Next</span> <span className='text-green1'>Stay</span></h2>
-                <h3 className="text-lg md:text-xl lg:text-2xl">Search low prices on hotels, homes and much more...</h3>
+                <h3 className="text-lg md:text-xl lg:text-2xl">Search low prices on apartments , villas and much more...</h3>
             </div>
             <button
                 onClick={prevSlide}

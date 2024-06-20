@@ -159,17 +159,20 @@ const getLoggedInUserEmail = (allUserData) => {
                 <div className="hidden md:flex items-center space-x-4 flex-grow">
                     <ul className="flex flex-row items-center space-x-4 ">
                         <li>
-                            <a href="/" className="text-white hover:text-grey1">Home</a>
+                            <a href="/" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Home</a>
                         </li>
                        
                         <li>
-                            <a href="/Search" className="text-white hover:text-grey1">Apartments</a>
+                            <a href="/Search" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Apartments</a>
                         </li>
                         <li>
-                            <a href="/About" className="text-white hover:text-grey1">About</a>
+                            <a href="/priceprediction" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Predict</a>
                         </li>
                         <li>
-                            <a href="/Contact" className="text-white hover:text-grey1">Contact</a>
+                            <a href="/About" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">About</a>
+                        </li>
+                        <li>
+                            <a href="/Contact" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Contact</a>
                         </li>
 
                         </ul>
@@ -277,16 +280,19 @@ const getLoggedInUserEmail = (allUserData) => {
                 
                 <ul className="flex flex-col items-center mt-4 space-y-4 ">
                     <li>
-                        <a href="/" className="text-white hover:text-grey1">Home</a>
+                        <a href="/" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Home</a>
                     </li>
                     <li>
-                        <a href="/Search" className="text-white hover:text-grey1">Apartments</a>
+                        <a href="/Search" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Apartments</a>
                     </li>
                     <li>
-                        <a href="#" className="text-white hover:text-grey1">About</a>
+                            <a href="/priceprediction" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Predict</a>
                     </li>
                     <li>
-                        <a href="/Contact" className="text-white hover:text-grey1">Contact</a>
+                        <a href="About" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">About</a>
+                    </li>
+                    <li>
+                        <a href="/Contact" className="text-white dark:text-white hover:text-lg transition-all duration-200 hover:text-grey1">Contact</a>
                     </li>
 
                 </ul>

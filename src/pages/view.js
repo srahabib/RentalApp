@@ -10,19 +10,19 @@ const view = () => {
     return (
         <main>
         <ol class="mx-56 mt-10 mb-10  flex  items-center w-auto">
-<li class="flex ml-20 w-full items-center text-black dark:text-orange-500 after:content-[''] after:w-full after:h-1 after:border-b 
-after:border-amber-100 after:border-4 after:inline-block dark:after:border-amber-600">
-    <span class="flex items-center justify-center w-10 h-10 bg-amber-600 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
+<li class="flex ml-20 w-full items-center text-white  after:content-[''] after:w-full after:h-1 after:border-b 
+after:border-green-100 after:border-4 after:inline-block ">
+    <span class="flex items-center justify-center w-10 h-10 bg-green1 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-    class="w-6 h-6 bg-amber-600 ">
+    class="w-6 h-6 bg-green1">
     <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
     </svg>
 
     </span>
 </li>
-<li class="flex w-full items-center after:content-[''] after:w-full after:h-1
- after:border-b after:border-amber-100 after:border-4 after:inline-block dark:after:border-amber-700">
-    <span class="flex items-center justify-center w-10 h-10 bg-amber-600 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
+<li class="flex w-full items-center after:content-[''] after:w-full after:h-1 text-white
+ after:border-b after:border-green-100 after:border-4 after:inline-block ">
+    <span class="flex items-center justify-center w-10 h-10 bg-green1 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -64,7 +64,7 @@ dark:after:border-gray-700">
             <p>
         <span class="inline-flex items-center text-xl">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            fill="currentColor" class="w-6 h-6  text-amber-600">
+            fill="currentColor" class="w-6 h-6  text-green1">
             <path fill-rule="evenodd"
             d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
             </svg>    
@@ -75,25 +75,22 @@ dark:after:border-gray-700">
         <h2 class="text-xl font-semibold mb-4 text-gray-900 mt-10 dark:text-gray-100">General Information</h2>
         <div class="text-gray-500">
 
-
-
-
-
         <dl>
-            <div class="bg-white px-2 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-                <dt class="text-lg font-medium text-gray-500">
-                Advertise No  :          
-                </dt>
-                <dd class="mt-1 text-lg font-bold text-red-500 sm:mt-0 sm:col-span-2">
-                    0-12323
-                </dd>
-            </div>
+
             <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
                 <dt class="text-lg font-medium text-gray-500">
                 published Date
                 </dt>
                 <dd class="mt-1 text-lg font-bold text-gray-900 sm:mt-0 sm:col-span-2">
                     2March2024
+                </dd>
+            </div>
+            <div class="bg-white px-2 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                <dt class="text-lg font-medium text-gray-500">
+                Price  :          
+                </dt>
+                <dd class="mt-1 text-lg font-bold text-red-500 sm:mt-0 sm:col-span-2">
+                    350
                 </dd>
             </div>
             <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
@@ -287,10 +284,7 @@ dark:after:border-gray-700">
 </div>
 </div>
 
-
-
-
-<button onClick={handleClick}  type="button" id="theme-toggle" class="px-5 mt-10 text-center justify-items-end py-2 rounded bg-amber-600 text-white hover:bg-amber-800 focus:outline-none transition-colors">
+<button onClick={handleClick}  type="button" id="theme-toggle" class="px-5 mt-10 text-center justify-items-end py-2 rounded focus:outline-none transition-colors  bg-green2 text-white font-bold focus:ring-4 focus:ring-grey1 focus:bg-bej1 focus:text-black">
                 Next
             </button>
     </div>

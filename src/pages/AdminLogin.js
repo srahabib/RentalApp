@@ -30,7 +30,7 @@ const AdminLogin = () => {
       document.cookie = `accessToken=${access_token}; path=/`;
 
       console.log("Logged in!");
-      window.location.pathname = "/";
+      window.location.pathname = "/DashAdmin";
     } else {
       console.error("Failed to log in");
     }
