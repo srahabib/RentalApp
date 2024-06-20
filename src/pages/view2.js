@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import Bar2 from "../components/FormHero/Bar2";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -92,7 +91,7 @@ const view = () => {
       });
       console.log("DONEE!!");
       // After successful submission, navigate to another page
-      router.push("/Published");
+      router.push("/Published2");
     } catch (error) {
       console.error("Error submitting data:", error);
     }

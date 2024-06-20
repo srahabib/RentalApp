@@ -5,7 +5,7 @@ const Bar1 = () => {
     <div className="container mx-auto sm:w-full">
       <ol class="mx-56 mb-10 pt-10 flex content-center items-center ">
         <li
-          class="flex w-full items-center text-black dark:text-orange-500 after:content-[''] after:w-full after:h-1 after:border-b
+          class="flex w-full items-center text-white  after:content-[''] after:w-full after:h-1 after:border-b
                 after:border-grey1 after:border-4 after:inline-block dark:after:border-green2"
         >
           <span class="flex items-center justify-center w-10 h-10 bg-green2 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
