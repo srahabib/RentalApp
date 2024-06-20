@@ -39,7 +39,7 @@ import numpy as np
 from flask_cors import CORS
 
 # Load the machine learning model
-path = r"D:/test/modelinterval.pkl"
+path = r"E:/my-project/modelinterval.pkl"
 model = pickle.load(open(path, 'rb'))
 
 app = Flask(__name__)
