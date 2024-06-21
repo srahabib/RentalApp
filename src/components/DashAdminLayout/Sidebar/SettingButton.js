@@ -2,7 +2,7 @@ import React from 'react';
 
 const SettingButton = () => {
     return (
-        <div className="inline-flex items-center justify-center h-20 w-20 border-t border-amber-600">
+        <div className="inline-flex items-center justify-center h-20 w-20 border-t border-green1">
             <button className="p-3 hover:text-gray-400 hover:bg-gray-700 focus:text-white focus:bg-gray-700 rounded-lg">
             <span className="sr-only">Settings</span>
             <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-10 w-10">
