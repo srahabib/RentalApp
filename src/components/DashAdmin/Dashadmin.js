@@ -11,8 +11,13 @@ const data = {
 
 
 
+
+
+
+
+
 const sampleData = {
-  labels: ['Owner(1)','Owner(2)', 'Owner(3)', 'Owner(4)', 'Owner(5)', 'Owner(6)', 'Owner(7)', 'Owner(8)', 'Owner(9)', 'Owner(10)'],
+  labels: ['mohamed ali','mona nady', 'omar samir', 'ali adnan', 'ashraf sayed', 'hady samy', 'aser kareem', 'loay omar', 'seif ahmed', 'noha nady'],
   datasets: [
     {
       label: 'Profit',
@@ -27,7 +32,7 @@ const sampleData = {
         'rgb(171, 250, 255)',
         'rgb(235, 229, 177)',
         'rgb(179, 204, 255)',
-        'rgb(255, 225, 140)',
+        'rgb(67, 104, 80)',
       ],
     },
   ],
@@ -58,7 +63,7 @@ const Dashboard = () => {
 
         <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
         <div className="flex items-center p-8 bg-white shadow rounded-lg">
-        <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-amber-600 rounded-full mr-6">
+        <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-green1 rounded-full mr-6">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
         <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
       </svg>          
@@ -69,7 +74,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="flex items-center p-8 bg-white shadow rounded-lg">
-      <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-amber-600 rounded-full mr-6">
+      <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-green1 rounded-full mr-6">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
       <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
     </svg>          
@@ -80,7 +85,7 @@ const Dashboard = () => {
       </div>
     </div>
           <div className="flex items-center p-8 bg-white shadow rounded-lg">
-            <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-amber-600 rounded-full mr-6">
+            <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-green1 rounded-full mr-6">
             <svg class="w-10 h-10 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
 </svg>
@@ -93,7 +98,7 @@ const Dashboard = () => {
             </div>
             
             <div className="flex items-center p-8 bg-white shadow rounded-lg">
-            <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-amber-600 rounded-full mr-6">
+            <div className="inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-white bg-green1 rounded-full mr-6">
             <svg class="w-10 h-10 text-wight dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.6 16.733c.234.269.548.456.895.534a1.4 1.4 0 0 0 1.75-.762c.172-.615-.446-1.287-1.242-1.481-.796-.194-1.41-.861-1.241-1.481a1.4 1.4 0 0 1 1.75-.762c.343.077.654.26.888.524m-1.358 4.017v.617m0-5.939v.725M4 15v4m3-6v6M6 8.5 10.5 5 14 7.5 18 4m0 0h-3.5M18 4v3m2 8a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"/>
 </svg>
@@ -153,7 +158,7 @@ const Dashboard = () => {
 
             </div>
             <div>
-              <span className="block text-2xl font-bold">Owner(9)</span>
+              <span className="block text-2xl font-bold">seif ahmed</span>
               <span className="block text-gray-500">Highest Profit</span>
             </div>
           </div>
@@ -165,7 +170,7 @@ const Dashboard = () => {
 
             </div>
             <div>
-              <span className="block text-2xl font-bold">Owner(1)</span>
+              <span className="block text-2xl font-bold">mohamed ali</span>
               <span className="block text-gray-500">Lowest Profit</span>
             </div>
           </div>
@@ -425,7 +430,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4 whitespace-no-wrap">alaa_ghanem@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Accept</button>
+                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 mr-2">Accept</button>
                             <button className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Refuse</button>
                         </td>
                     </tr>
@@ -434,7 +439,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4 whitespace-no-wrap">hana_fathy@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Accept</button>
+                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 mr-2">Accept</button>
                             <button className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Refuse</button>
                         </td>
                     </tr>
@@ -443,7 +448,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4 whitespace-no-wrap">rana_kamal@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Accept</button>
+                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 mr-2">Accept</button>
                             <button className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Refuse</button>
                         </td>
                     </tr>
@@ -452,7 +457,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4 whitespace-no-wrap">ahmed_adel@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Accept</button>
+                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 mr-2">Accept</button>
                             <button className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Refuse</button>
                         </td>
                     </tr>
@@ -461,7 +466,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4 whitespace-no-wrap">fawzy_mohamed@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Accept</button>
+                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 mr-2">Accept</button>
                             <button className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Refuse</button>
                         </td>
                     </tr>
@@ -470,7 +475,7 @@ const Dashboard = () => {
                         <td className="px-6 py-4 whitespace-no-wrap">mariam ibrahim@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Accept</button>
+                            <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 mr-2">Accept</button>
                             <button className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Refuse</button>
                         </td>
                     </tr>
