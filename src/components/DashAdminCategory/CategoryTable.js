@@ -15,8 +15,8 @@ const ThreeDTable = () => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                     <tr>
-                        <td className="px-6 py-4 whitespace-no-wrap">user1</td>
-                        <td className="px-6 py-4 whitespace-no-wrap">user1@gmail.com</td>
+                        <td className="px-6 py-4 whitespace-no-wrap">mariam salah</td>
+                        <td className="px-6 py-4 whitespace-no-wrap">mariam salah@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -24,8 +24,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user2</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user2@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">kamal elsayed</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">kamal elsayed@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -33,8 +33,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user3</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user3@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">tamer adel</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">tamer adel@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -42,8 +42,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user4</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user4@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">hazem sherif</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">hazem sherif@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -51,8 +51,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user5</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user5@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">abas mohamed</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">abas mohamed@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -60,8 +60,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user6</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user6@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">farida elsayed</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">farida elsayed@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -69,8 +69,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user7</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user7@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">jana adel</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">jana adel@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -78,8 +78,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user8</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user8@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">shaimaa ahmed</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">shaimaa ahmed@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -87,8 +87,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user9</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user9@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">kareem fady</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">kareem fady@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
@@ -96,8 +96,8 @@ const ThreeDTable = () => {
                         </td>
                     </tr>
                     <tr>
-                    <td className="px-6 py-4 whitespace-no-wrap">user10</td>
-                    <td className="px-6 py-4 whitespace-no-wrap">user10@gmail.com</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">seif mohamed</td>
+                    <td className="px-6 py-4 whitespace-no-wrap">seif mohamed@gmail.com</td>
                         <td className="px-6 py-4 whitespace-no-wrap">123-456-7890</td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                             <button className="inline-flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600 mr-2"><FaTrash /></button>
