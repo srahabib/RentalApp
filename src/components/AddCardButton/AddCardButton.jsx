@@ -125,7 +125,7 @@ const AddCardButton = () => {
                         <div className="flex gap-4 mt-4">
                             <button
                                 onClick={handleSaveClick}
-                                className="bg-amber-600 text-white px-4 py-2 rounded"
+                                className="bg-green2 text-white px-4 py-2 rounded"
                             >
                                 Save
                             </button>
