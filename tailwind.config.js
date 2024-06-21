@@ -21,6 +21,8 @@ module.exports = {
     },
     extend: {
       colors: {
+         green1: 'rgb(18, 55, 42)',
+         green2: 'rgb(67, 104, 80)',
         'green1': '#12372A',
         'green2': '#436850',
         'grey1': '#ADBC9F',
