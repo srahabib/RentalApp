@@ -1,7 +1,7 @@
 import react from "react";
 import { useEffect, useRef, useState } from "react";
 
-const REACT_APP_GOOGLE_MAPS_KEY = "AIzaSyAhcXdT801aTtpJAzoP1eBM3fVt3mtyQ-8";
+const REACT_APP_GOOGLE_MAPS_KEY = "AIzaSyDhx6PdnYeWldnHyhTTc2WEdBx7RdWfI9U";
 let autoComplete;
 
 const loadScript = (url, callback) => {

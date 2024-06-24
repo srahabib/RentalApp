@@ -184,7 +184,7 @@ const getLoggedInUserEmail = (allUserData) => {
                 <div className='flex flex-row '>
                     <a className='text-bej1 font-bold text-xs mt-2 hover:text-grey1'>
                         {!owner ? (
-                            <a href="/Contact-Details" className="block text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Become an owner</a>
+                            <a href="/Contact-Details" className="block text-sm text-bej1 hover:bg-grey1">Become an owner</a>
                         ) : (
                             f === true ? (
                                 <a onClick={Switchtowner} className='switch-to-owner'> Switch to Owner </a>
