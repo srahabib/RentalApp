@@ -332,7 +332,7 @@ export default function PricePredictionForm() {
               <span className="text-sm mr-1 tracking-wide font-bold">Min</span>
               <input
                 className="border-2 border-green1 rounded w-24 h-10 text-center italic"
-                value={Math.floor(Math.abs(predictedPrice * 0.28))}
+                value={Math.floor(Math.abs(predictedPrice * 0.58))}
               />
             </div>
             <div className="flex items-center mx-2">
@@ -342,7 +342,7 @@ export default function PricePredictionForm() {
               <span className="text-sm mr-1 tracking-wide font-bold">Max</span>
               <input
                 className="border-2 border-green1 rounded w-24 h-10 text-center italic"
-                value={Math.round(predictedPrice * 0.58)}
+                value={Math.round(predictedPrice * 1.2)}
               />
             </div>
           </div>
