@@ -3,11 +3,12 @@ import Bar1 from "../components/FormHero/BarAd";
 import { useRouter } from "next/router";
 import MyGoogleMap from "../components/Map/GoogleMapComponent";
 import { images } from "../../next.config";
+import UploadImage from "../components/UploadImage/UploadImage";
 
 const PropertyDetails = () => {
   const url = "https://rentor-b.onrender.com/property/add";
   const [clickedLocation, setClickedLocation] = useState(null);
-  // const [PhotosCount, setPhotosCount] = useState(0);
+  const [PhotosCount, setPhotosCount] = useState(0);
   const [val, setVal] = useState([]);
 
   const handleAdd = () => {
@@ -48,9 +49,9 @@ const PropertyDetails = () => {
   //   setUploadedImages([...uploadedImages, ...newImages]);
   // };
 
-  // const handlePhotosClick = () => {
-  //   setPhotosCount((prevCount) => prevCount + 1);
-  // };
+  const handlePhotosClick = () => {
+    setPhotosCount((prevCount) => prevCount + 1);
+  };
 
   const handleImagesUploaded = (newImages) => {
     // Update state with the newly uploaded images
@@ -292,17 +293,17 @@ const PropertyDetails = () => {
                 <h2 className="mb-3 mt-4 text-sm font-semibold">
                   Upload property photos{" "}
                 </h2>
-                {/* <UploadImage onImagesUploaded={handleImagesUploaded} /> */}
-                {/* {[...Array(PhotosCount)].map((_, index) => (
-              <input
-                onChange={(e) => handle(e)}
-                id="images"
-                value={data.images[index] || ""}
-                key={index}
-                className="border p-2 mr-2 rounded text-md shadow-md w-48 h-8"
-              ></input>
-            ))}
-            <button
+                <UploadImage onImagesUploaded={handleImagesUploaded} />
+                {[...Array(PhotosCount)].map((_, index) => (
+                  <input
+                    onChange={(e) => handle(e)}
+                    id="images"
+                    value={data.images[index] || ""}
+                    key={index}
+                    className="border p-2 mr-2 rounded text-md shadow-md w-48 h-8"
+                  ></input>
+                ))}
+                {/* <button
               className="px-5 mt-2 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-green1 focus:outline-none transition-colors"
               onClick={handlePhotosClick}
             >
