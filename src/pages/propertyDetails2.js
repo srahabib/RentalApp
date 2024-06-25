@@ -33,7 +33,14 @@ const PropertyDetails = () => {
     setClickedLocation(latLng);
     // Do something with the latitude and longitude, such as sending it to the server
     console.log("Clicked location:", latLng);
-    setData({ ...data, location: { ...data.location, latitude: latLng.lat, longitude: latLng.lng } })
+    setData({
+      ...data,
+      location: {
+        ...data.location,
+        latitude: latLng.lat,
+        longitude: latLng.lng,
+      },
+    });
   };
 
   // const handleImagesUploaded = (newImages) => {
@@ -56,6 +63,7 @@ const PropertyDetails = () => {
     title: "",
     description: "",
     price: "",
+    per: "",
     type: "",
     area: "",
     num_rooms: "",
@@ -71,20 +79,20 @@ const PropertyDetails = () => {
     location: {
       latitude: "",
       longitude: "",
-    }
+    },
   });
 
   function submit(e) {
     e.preventDefault();
 
     router.push({
-      pathname: '/view2',
+      pathname: "/view2",
       query: {
         ...data,
         lon: data.location.longitude,
-        lat: data.location.latitude
-      }
-    })
+        lat: data.location.latitude,
+      },
+    });
   }
 
   function handle(e) {
@@ -96,9 +104,7 @@ const PropertyDetails = () => {
       // For other inputs, just set the value as it is
       newData[e.target.id] = e.target.value;
     }
-    // newData[e.target.id] = e.target.value;
     setData(newData);
-    // console.log(newData);
   }
 
   return (
@@ -114,7 +120,7 @@ const PropertyDetails = () => {
               <h1 className="text-l font-semibold mb-4 text-gray-900 dark:text-gray-100 border-b-2 border-green2 w-40">
                 General Information
               </h1>
-              <div className=" grid md:grid-cols-3 gap-4 w-full py-5">
+              <div className=" grid md:grid-cols-4 gap-4 w-full py-5">
                 <input
                   onChange={(e) => handle(e)}
                   id="title"
@@ -132,7 +138,19 @@ const PropertyDetails = () => {
                   placeholder="Price"
                   className="text-md shadow-md border p-2 rounded-md w-full placeholder:text-gray-500"
                 />
-
+                <select
+                  onChange={(e) => handle(e)}
+                  id="per"
+                  value={data.per}
+                  className="shadow-md block text-md text-gray-500 dark:text-gray-500 bg-white border border-gray-300 rounded-md w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  <option value="" disabled hidden>
+                    Per
+                  </option>
+                  <option value="day">Day</option>
+                  <option value="month">Month</option>
+                  <option value="year">Year</option>
+                </select>
                 <select
                   onChange={(e) => handle(e)}
                   id="type"

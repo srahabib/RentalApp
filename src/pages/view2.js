@@ -1,3 +1,112 @@
+// import React from "react";
+// import Bar2 from "../components/FormHero/Bar2";
+// import { useRouter } from "next/router";
+// import axios from "axios";
+
+// const view = () => {
+//   const url = "https://rentor-b.onrender.com/property/add";
+//   const router = useRouter();
+
+//   var {
+//     title,
+//     description,
+//     price,
+//     type,
+//     per,
+//     area,
+//     num_rooms,
+//     num_bath_rooms,
+//     floor_location,
+//     street_address,
+//     furnished,
+//     city,
+//     postal_code,
+//     email,
+//     phone,
+//     images,
+//     lon,
+//     lat,
+//   } = router.query;
+
+//   var boolFurnished;
+//   var valFurnished;
+//   if (furnished == "false") {
+//     boolFurnished = false;
+//     valFurnished = "No";
+//   } else {
+//     boolFurnished = true;
+//     valFurnished = "Yes";
+//   }
+
+//   if (typeof images === "undefined") {
+//     images = [];
+//   }
+
+//   const data = {
+//     title: title,
+//     description: description,
+//     price: price,
+//     per: per,
+//     type: type,
+//     area: area,
+//     num_rooms: num_rooms,
+//     num_bath_rooms: num_bath_rooms,
+//     floor_location: floor_location,
+//     street_address: street_address,
+//     furnished: boolFurnished,
+//     city: city,
+//     postal_code: postal_code,
+//     email: email,
+//     phone: phone,
+//     images: images,
+//     location: {
+//       latitude: Number(lat),
+//       longitude: Number(lon),
+//     },
+//   };
+
+//   console.log(data);
+
+//   const submit = async (e) => {
+//     e.preventDefault();
+//     const token = document.cookie
+//       .split("; ")
+//       .find((row) => row.startsWith("accessToken"))
+//       .split("=")[1];
+//     try {
+//       await axios.post(url, {
+//         title: data.title,
+//         description: data.description,
+//         price: data.price,
+//         type: data.type,
+//         area: data.area,
+//         num_rooms: data.num_rooms,
+//         num_bath_rooms: data.num_bath_rooms,
+//         floor_location: data.floor_location,
+//         street_address: data.street_address,
+//         furnished: data.furnished,
+//         city: data.city,
+//         postal_code: data.postal_code,
+//         email: data.email,
+//         phone: data.phone,
+//         images: data.images,
+//         location: {
+//           latitude: data.location.latitude,
+//           longitude: data.location.longitude,
+//         },
+//         headers: {
+//           Authorization: `Bearer ${token}`, // Add the correct token here
+//           "Content-Type": "application/json",
+//         },
+//       });
+//       console.log("DONEE!!", response.data);
+//       // After successful submission, navigate to another page
+//       router.push("/Published2");
+//     } catch (error) {
+//       console.error("Error submitting data:", error);
+//       console.log(token);
+//     }
+//   };
 import React from "react";
 import Bar2 from "../components/FormHero/Bar2";
 import { useRouter } from "next/router";
@@ -7,11 +116,12 @@ const view = () => {
   const url = "https://rentor-b.onrender.com/property/add";
   const router = useRouter();
 
-  var {
+  const {
     title,
     description,
     price,
     type,
+    per,
     area,
     num_rooms,
     num_bath_rooms,
@@ -27,36 +137,26 @@ const view = () => {
     lat,
   } = router.query;
 
-  var boolFurnished;
-  var valFurnished;
-  if (furnished == "false") {
-    boolFurnished = false;
-    valFurnished = "No";
-  } else {
-    boolFurnished = true;
-    valFurnished = "Yes";
-  }
-
-  if (typeof images === "undefined") {
-    images = [];
-  }
+  const boolFurnished = furnished === "true";
+  const valFurnished = boolFurnished ? "Yes" : "No";
 
   const data = {
-    title: title,
-    description: description,
-    price: price,
-    type: type,
-    area: area,
-    num_rooms: num_rooms,
-    num_bath_rooms: num_bath_rooms,
-    floor_location: floor_location,
-    street_address: street_address,
+    title,
+    description,
+    price,
+    per,
+    type,
+    area,
+    num_rooms,
+    num_bath_rooms,
+    floor_location,
+    street_address,
     furnished: boolFurnished,
-    city: city,
-    postal_code: postal_code,
-    email: email,
-    phone: phone,
-    images: images,
+    city,
+    postal_code,
+    email,
+    phone,
+    images: images || [],
     location: {
       latitude: Number(lat),
       longitude: Number(lon),
@@ -67,36 +167,29 @@ const view = () => {
 
   const submit = async (e) => {
     e.preventDefault();
+
+    // Retrieve the access token from cookies
+    const token = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("accessToken"))
+      .split("=")[1];
+
+    // const token = localStorage.getItem('accessToken');
+
     try {
-      await axios.post(url, {
-        title: data.title,
-        description: data.description,
-        price: data.price,
-        type: data.type,
-        area: data.area,
-        num_rooms: data.num_rooms,
-        num_bath_rooms: data.num_bath_rooms,
-        floor_location: data.floor_location,
-        street_address: data.street_address,
-        furnished: data.furnished,
-        city: data.city,
-        postal_code: data.postal_code,
-        email: data.email,
-        phone: data.phone,
-        images: data.images,
-        location: {
-          latitude: data.location.latitude,
-          longitude: data.location.longitude,
+      const { per, ...rest } = data;
+      await axios.post(url, rest, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
       });
       console.log("DONEE!!");
-      // After successful submission, navigate to another page
       router.push("/Published2");
     } catch (error) {
       console.error("Error submitting data:", error);
     }
   };
-
   return (
     <div
       style={{ backgroundImage: "url('./images/image1.jpg')" }}
@@ -120,6 +213,12 @@ const view = () => {
                 <dt class="text-md font-medium text-gray-500">Price :</dt>
                 <dd class="mt-1 text-md font-semibold text-gray-900 sm:mt-0 sm:col-span-2">
                   {data.price}
+                </dd>
+              </div>
+              <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+                <dt class="text-md font-medium text-gray-500">per :</dt>
+                <dd class="mt-1 text-md font-semibold text-gray-900 sm:mt-0 sm:col-span-2">
+                  {data.per}
                 </dd>
               </div>
               <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
@@ -234,7 +333,8 @@ const view = () => {
             <button
               onClick={submit}
               id="next"
-              class="px-5 mt-2 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-green1 focus:outline-none transition-colors">
+              class="px-5 mt-2 text-center justify-items-end py-2 rounded bg-green2 text-white hover:bg-green1 focus:outline-none transition-colors"
+            >
               Next
             </button>
           </div>
