@@ -20,7 +20,7 @@ const MyGoogleMap = ({ onMapClick }) => {
 
   return (
     <div className="text-slate font-bold font-xl rounded-[10px] overflow-hidden">
-      <LoadScript googleMapsApiKey="AIzaSyDhx6PdnYeWldnHyhTTc2WEdBx7RdWfI9U">
+      <LoadScript googleMapsApiKey="AIzaSyDyYCSVIR-aknwM74BbBJ-Yi97C_6OP3mw">
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           center={{ lat: 31.2565102, lng: 30.0087259 }}
