@@ -187,9 +187,9 @@ const getLoggedInUserEmail = (allUserData) => {
                             <a href="/Contact-Details" className="block text-sm text-bej1 hover:bg-grey1">Become an owner</a>
                         ) : (
                             f === true ? (
-                                <a onClick={Switchtowner} className='switch-to-owner'> Switch to Owner </a>
+                                <a onClick={Switchtowner} className='switch-to-owner'>Switch to User </a>
                             ) : (
-                                <a onClick={Switchtuser} className='switch-to-user'> Switch to User </a> 
+                                <a onClick={Switchtuser} className='switch-to-user'>Switch to Owner</a> 
                             )
                         )}
 
@@ -207,26 +207,21 @@ const getLoggedInUserEmail = (allUserData) => {
                                 <div className="absolute right-0 mt-2 z-50 w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                                     <div className="px-4 py-3">
                                         <span className="block text-sm text-gray-900 dark:text-white">{userData ? userData.firstName : 'User'}</span>
-                                        <span className="block text-sm text-gray-500 truncate dark:text-gray-400">{userData ? userData.email : 'email@example.com'}</span>
+                                        <span className="block text-sm text-gray-500 truncate dark:text-gray-400">{userData ? userData.email : 'User@example.com'}</span>
                                     </div>
                                     <ul className="py-2" aria-labelledby="user-menu-button">
                                          <li>
                                             <a href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
                                         </li>
-                                        {f === false && (
+                                        {f === true && (
                                             <li>
                                                 <a href="/propertyDetails" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Post Property</a>
-                                            </li>
-                                        )}
-                                        {f === false && (
-                                            <li>
-                                                <a href="/DashOwner" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
                                             </li>
                                         )}
 
                                         {f === true && (
                                             <li>
-                                                <a href="/DashOwner" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" style={{ display: 'none' }}>Dashboard</a>
+                                                <a href="/DashOwner" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
                                             </li>
                                         )}
                                         <li>
